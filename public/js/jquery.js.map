@@ -1,0 +1,1 @@
+{"version":3,"file":"/js/jquery.js","mappings":"mBACAA,QAAO,WACF,eAAgBC,GAAG,SAAS,WAC3BC,MAAM,yB","sources":["webpack:///./resources/js/jquery.js"],"sourcesContent":["'use strict';\r\njQuery(function(){\r\n    ('#test_jquery').on('click', function () {\r\n      alert(\"Hello, jQuery!\");\r\n    })\r\n  });"],"names":["jQuery","on","alert"],"sourceRoot":""}
