@@ -35,7 +35,7 @@ Route::put('users/{id}/update', 'App\Http\Controllers\UserController@update');
 Route::get('payment/index/{id}', 'App\Http\Controllers\PostController@getPaymentPage')->name('payment.page')->middleware('auth');
 Route::get('payment/tip/{id}', 'App\Http\Controllers\PostController@getTipPayment')->name('payment.tip')->middleware('auth');
 Route::post('/payment/done/{id}','App\Http\Controllers\PostController@donePayment')->name('payment.done')->middleware('auth');
-Route::post('payment/tip/{id}', 'App\Http\Controllers\PostController@doneTipPayment')->name('tip.done')->middleware('auth');
+Route::post('payment/tip/done/{id}', 'App\Http\Controllers\PostController@doneTipPayment')->name('tip.done')->middleware('auth');
 Route::get('/payment/form','App\Http\Controllers\PaymentController@getPaymentForm')->name('payment.form')->middleware('auth');
 Route::post('/payment/store', 'App\Http\Controllers\PaymentController@storePaymentInfo')->name('payment.store')->middleware('auth');
 Route::post('/payment/destroy','App\Http\Controllers\PaymentController@deletePaymentInfo')->name('payment.destroy')->middleware('auth');
