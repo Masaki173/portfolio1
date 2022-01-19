@@ -19,7 +19,6 @@ class PaymentController extends Controller
 
     }
 
-
     public function storePaymentInfo(Request $request){
      
         $token = $request->stripeToken;
@@ -36,8 +35,6 @@ class PaymentController extends Controller
                     return redirect('/payment/form')->with('errors', $errors);
                 }
             
-
-       
             } else {
                 $defaultCard = Payment::getDefaultcard($user);
                 if (isset($defaultCard['id'])) {
