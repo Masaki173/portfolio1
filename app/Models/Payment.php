@@ -70,49 +70,4 @@ class Payment extends Model
         }
         return true;
     }
-
-//   protected static function getDefaultcard($user)
-//   {
-//       \Stripe\Stripe::setApiKey(\Config::get('payment.stripe_secret_key'));
-
-//       $default_card = null;
-
-//       if (!is_null($user->stripe_id)) {
-//           $customer = \Stripe\Customer::retrieve($user->stripe_id);
-
-//           if (isset($customer['default_source']) && $customer['default_source']) {
-
-//               $card = $customer->sources->data[0];
-//               $default_card = [
-//                   'number' => str_repeat('*', 8) . $card->last4,
-//                   'brand' => $card->brand,
-//                   'exp_month' => $card->exp_month,
-//                   'exp_year' => $card->exp_year,
-//                   'name' => $card->name,
-//                   'id' => $card->id,
-//               ];
-//           }
-//       }
-//       else{
-//           return false;
-//       }
-//       return $default_card;
-//   }
-//   protected static function deleteCard($user)
-//   {
-//       \Stripe\Stripe::setApiKey(\Config::get('payment.stripe_secret_key'));
-//       $customer = \Stripe\Customer::retrieve($user->stripe_id);
-//       $card = $customer->sources->data[0];
-
-//       var_dump($card,"カード");
-//       /* card情報が存在していれば削除 */
-//       if ($card) {
-//           \Stripe\Customer::deleteSource(
-//               $user->stripe_id,
-//               $card->id
-//           );
-//           return true;
-//       }
-//       return false;
-//   }
 }
