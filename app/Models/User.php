@@ -18,7 +18,7 @@ class User extends Authenticatable
     use SoftDeletes;
     use \Askedio\SoftCascade\Traits\SoftCascadeTrait;
 
-    protected $softCascade =['posts', 'subscriptions', 'tips'];
+    protected $softCascade =['posts', 'post_subscriptions', 'tips'];
 
     protected $fillable = [
         'id',
@@ -26,7 +26,7 @@ class User extends Authenticatable
         'email',
         'password',
         'icon',
-        'stripe_id',
+        'stripe_code',
     ];
 
     /**

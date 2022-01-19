@@ -112,12 +112,6 @@ class PostController extends Controller
       return view('posts.payment.tip', compact('post', 'user'));
 
   }
-  //   public function getUserInfo(){
-  //     $user = Auth::user();
-  //     $defaultCard = Payment::getDefaultcard($user);
-
-  //     return view('user.index', compact('user', 'defaultCard'));
-  // }
     public function donePayment(Request $request, $id){
       $post = Post::find($id);
     \Stripe\Stripe::setApiKey(\Config::get('payment.stripe_secret_key'));
@@ -128,7 +122,7 @@ class PostController extends Controller
                 'amount'      => $request->price,
                 'currency'    => 'jpy',
                 'description' => 'ユーザー：'.$user->name."=>".$post->title."投稿購読分",
-                'customer'      => $user->stripe_id,
+                'customer'      => $user->stripe_code,
             ];
 
             $charge = \Stripe\Charge::create($chargeOject);
@@ -158,7 +152,7 @@ class PostController extends Controller
       'amount'      => $request->price,
       'currency'    => 'jpy',
       'description' => 'ユーザー：'.$user->name."=>".$post->title."、チップ支払い分",
-      'customer'      => $user->stripe_id,
+      'customer'      => $user->stripe_code,
   ];
   $charge = \Stripe\Charge::create($chargeOject);
   Tip::create(

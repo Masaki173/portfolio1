@@ -14,7 +14,7 @@ class AddStripeIdToUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('stripe_id')->unique()->nullable();
+            $table->string('stripe_code')->unique()->nullable();
         });
     }
 
@@ -26,7 +26,7 @@ class AddStripeIdToUsers extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('stripe_id');
+            $table->dropColumn('stripe_code');
         });
     }
 }
