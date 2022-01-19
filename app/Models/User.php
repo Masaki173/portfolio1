@@ -75,14 +75,4 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Models\Tip');
     }
-    // public function is_followed_by_auth_user(){
-    //     $authuser = Auth::id();
-    //      if($this->leftJoin('users')->where('id', $this->id)
-    //      ->leftJoin('follower_user')
-    //      ->find($authuser)){
-    //          return true;
-    //      }else{
-    //          return false;
-    //      }
-    // }
 }
