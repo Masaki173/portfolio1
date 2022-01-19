@@ -36,7 +36,7 @@ class Payment extends Model
       $targetCustomer = null;
       if (isset($customer->id)) {
           $targetCustomer = User::find(Auth::id());//要するに当該顧客のデータをUserテーブルから引っ張りたい
-          $targetCustomer->stripe_id = $customer->id;
+          $targetCustomer->stripe_code = $customer->id;
           $targetCustomer->update();
           return true;
       }
@@ -47,7 +47,7 @@ class Payment extends Model
         \Stripe\Stripe::setApiKey(\Config::get('payment.stripe_secret_key'));
 
         try {
-            $customer = \Stripe\Customer::retrieve($user->stripe_id);
+            $customer = \Stripe\Customer::retrieve($user->stripe_code);
             $card = $customer->sources->create(['source' => $token]);
 
             if (isset($customer)) {

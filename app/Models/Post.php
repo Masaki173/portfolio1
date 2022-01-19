@@ -11,7 +11,7 @@ class Post extends Model
 {
   use SoftDeletes;
   use \Askedio\SoftCascade\Traits\SoftCascadeTrait;
-  protected $softCascade =['subscriptions', 'tips'];
+  protected $softCascade =['post_subscriptions', 'tips'];
     protected $guarded = array('id');
 
     public function user()

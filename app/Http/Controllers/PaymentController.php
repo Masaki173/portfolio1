@@ -38,7 +38,7 @@ class PaymentController extends Controller
         $ret = null;
         
         if ($token) {
-            if (!$user->stripe_id) {
+            if (!$user->stripe_code) {
                 $result = Payment::setCustomer($token, $user);
 
                 /* card error */
