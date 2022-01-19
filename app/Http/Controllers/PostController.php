@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\PostRequest;
+use App\Http\Requests\TipRequest;
+use App\Http\Requests\CommentRequest;
 use App\Models\User;
 use App\Models\Post;
 use App\Models\Like;
@@ -15,10 +17,6 @@ use App\Models\Subscription;
 
 class PostController extends Controller
 {
-  // public function __construct()
-  // {
-  //     $this->middleware('auth');
-  // }
     public function index(Request $request)
     {   
         $items = Post::with('user')->get();
@@ -28,7 +26,7 @@ class PostController extends Controller
     {
         return view('posts.create');
     }
-    public function store(Request $request)
+    public function store(PostRequest $request)
     {
         Post::create(
             array(
@@ -90,7 +88,7 @@ class PostController extends Controller
       $like->delete();
          return redirect()->back();
     }
-    public function storeComment(Request $request, $id){
+    public function storeComment(CommentRequest $request, $id){
       Comment::create(
         array(
           'user_id' => Auth::id(),
@@ -143,7 +141,7 @@ class PostController extends Controller
         return redirect('/')->with('success', "購読が完了しました。");
   }
 
-  public function doneTipPayment(Request $request, $id){
+  public function doneTipPayment(TipRequest $request, $id){
     $post = Post::find($id);
     \Stripe\Stripe::setApiKey(\Config::get('payment.stripe_secret_key'));
     try {

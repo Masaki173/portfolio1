@@ -11,21 +11,10 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Models\Post;
 use App\Models\Payment;
-// require_once('../../vendor/autoload.php');
 class PaymentController extends Controller
 {
-    // public function getCurrentPayment(Request $request, $id){
-    //    $user = Auth::user();
-    //     $post = Post::find($id);
-    //     $defaultCard = Payment::getDefaultcard($user);
-
-    //     return view('user.payment.index', compact('user', 'defaultCard'));
-
-    // }
-
     public function getPaymentForm(Request $request){
         $user = Auth::user();
-        // $post = Post::find($id);
         return view('posts.payment.form', compact('user'));
 
     }

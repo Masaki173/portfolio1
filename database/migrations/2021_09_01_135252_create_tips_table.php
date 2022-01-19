@@ -16,7 +16,7 @@ class CreateTipsTable extends Migration
         Schema::create('tips', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('price')->unsigned();
-            $table->string('comment');
+            $table->string('comment')->nullable();
             $table->bigInteger('user_id')->unsigned();
             $table->bigInteger('post_id')->unsigned();
             $table->timestamps();

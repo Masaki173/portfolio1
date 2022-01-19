@@ -8,10 +8,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 class UserController extends Controller
 {
-    // public function icon($icon){
-    //     $icon =  User::findorFail('icon');
-    //  return view('users.show',compact('icon'));
-    // }
     public function show($id){
         $user = User::with('posts')->findorFail($id);
         $follows_query = $user->leftjoin('follower_user', 'follower_user.user_id', '=', 'users.id')->where('follower_id', Auth::id());
@@ -31,7 +27,6 @@ class UserController extends Controller
         }else{
             return;
         }
-        // $user->icon = $request->file('icon')->storeAs('storage/icons', $icon);
         $user->profile = $request->profile;
         $user->save();
     
