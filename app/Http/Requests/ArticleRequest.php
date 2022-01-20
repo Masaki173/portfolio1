@@ -13,7 +13,7 @@ class ArticleRequest extends FormRequest
      */
     public function authorize()
     {
-        if ($this->path() == 'store'){
+        if ($this->path() == ''){
             return true;
         } else {
             return false;
