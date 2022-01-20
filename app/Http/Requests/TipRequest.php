@@ -37,6 +37,6 @@ class TipRequest extends FormRequest
     public function messages(){
         return [
            'price.required' => '値段をご記入ください。',
-        ]
+        ];
     }
 }
