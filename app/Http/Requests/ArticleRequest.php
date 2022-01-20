@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\ArticleRequest;
 
-class PostRequest extends FormRequest
+class PostRequest extends ArticleRequest
 {
     /**
      * Determine if the user is authorized to make this request.
