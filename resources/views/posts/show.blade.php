@@ -76,7 +76,7 @@
 <form action="{{ route('post.comment', $post->id) }}" method ="post" autocomplete="off">
 @csrf
 @error('content')
- <tr class><th="comment-error">Error</th>
+ <tr><th class="comment-error">Error</th>
  <td class="comment-message">{{$message}}</td></tr>
  @enderror
 <textarea name="content" placeholder="感想コメントを書きましょう" class="comment-box"></textarea>
