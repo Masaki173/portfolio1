@@ -94,7 +94,7 @@ class PostController extends Controller
         $messages = [
             'content.required' => 'コメントの本文をご記入ください。',
             ];
-        $validator = Varidator::make($request->all(), $rules, $messages);
+        $validator = Vaidator::make($request->all(), $rules, $messages);
          if($validator->fails()){
              return redirect(route('post.show', ['id' => $id,]))
                ->withErrors($validator)
@@ -161,7 +161,7 @@ class PostController extends Controller
             'price.required' => '値段をご記入ください。',
             'price.integer' => '整数値でご記入ください。',
             ];
-        $validator = Varidator::make($request->all(), $rules, $messages);
+        $validator = Validator::make($request->all(), $rules, $messages);
          if($validator->fails()){
              return redirect(route('payment.tip', ['id' => $id,]))
                ->withErrors($validator)
