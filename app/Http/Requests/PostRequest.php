@@ -35,9 +35,9 @@ class PostRequest extends FormRequest
     }
     public function messages(){
         return [
-           'title.required' => 'タイトルをご記入ください。'
-           'content.required' => '記事の本文をご記入ください。'
+           'title.required' => 'タイトルをご記入ください。',
+           'content.required' => '記事の本文をご記入ください。',
           'is_fee.required' => '無料記事と有料記事から記事の種類をお選びください。',
-        ]
+        ];
     }
 }
