@@ -75,8 +75,10 @@
 @csrf
 <textarea name="content" placeholder="感想コメントを書きましょう" class="comment-box"></textarea>
  @error('content')
+ <table class="comment-error">
  <tr><th>Error</th>
  <td>{{$message}}</td></tr>
+ <table>
  @enderror
 <button type="submit" class="comment-button">追加</button>
 </form>
