@@ -30,6 +30,10 @@
                             <form action="{{route('tip.done', $post->id)}}" method="POST">
                                             @csrf
                                             <label>￥<input type="tel" minlength="3" name="price"></input> JPY</label>
+                                             @error('')
+ 　　　　　　　　　　　　　　　　　　　　　　　<tr><th>Error</th>
+ 　　　　　　　　　　　　　　　　　　　　　　　<td>{{$message}}</td></tr>
+ 　　　　　　　　　　　　　　　　　　　　　　　@enderror
                                             <textarea name="comment" placeholder="チップにコメントを付けましょう" class="tip-box"></textarea>
                                             <button type="submit" id="" class="btn btn-primary">チップを投げる</button>
                                         </form>
