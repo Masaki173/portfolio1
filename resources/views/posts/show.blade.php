@@ -79,8 +79,8 @@
 <button type="submit" class="comment-button">追加</button>
 @error('content')
 <table class="comment-errorbox">
- <tr><th class="comment-error">Error</th>
- <td class="comment-message">{{$message}}</td></tr>
+ <tr><th class="comment-error"><p>Error</p></th>
+ <td class="comment-message"><p>{{$message}}</p></td></tr>
  </table>
  @enderror
 </form>
