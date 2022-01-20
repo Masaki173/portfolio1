@@ -262,6 +262,11 @@ margin-left:auto;
   height: 30px;
 }
 .comment-error{
-    margin:auto;
+     display: block;
+     margin-left: 40%;
+}
+.comment-message{
+     display: block;
+     margin-left: 45%;
 }
 }
