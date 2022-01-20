@@ -262,8 +262,6 @@ margin-left:auto;
   height: 30px;
 }
 .comment-error{
-    text-align:center;
-     margin-left: auto;
-    margin-right: auto;
+    margin:auto;
 }
 }
