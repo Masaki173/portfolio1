@@ -23,9 +23,9 @@
 @elseif($post->category_code === 5)
 <a href="/{{$post->category_code}}" class="category-url">エンタメ</a>
 @endif
+@if($post->is_fee === 1 && !$post->is_subscribed_by_auth_user())
 @auth
-@if($post->user->id !== Auth::user()->id && $post->is_fee === 1 && !$post->is_subscribed_by_auth_user())
-@if(is_null(Auth::user()->stripe_code))
+@if($post->user->id !== Auth::user()->id && is_null(Auth::user()->stripe_code))
 <h2 class="restricted-content">{{Str::limit($post->content, 60,'...')}}</h2>
 <p class="limit-line">--------この投稿をお読みいただくには購読が必要です--------</p>
 <form action="{{ route('payment.form') }}" method="get" class="text-center mt-5">
@@ -48,6 +48,8 @@
 @else
 <h2>{!! nl2br(e($post->content))!!}</h2>
 @endif
+
+
 <p class = "like-paragraph">投稿にいいねを押しましょう</p>
 @auth
   @if($post->is_liked_by_auth_user())
@@ -74,7 +76,7 @@
 <form action="{{ route('post.comment', $post->id) }}" method ="post" autocomplete="off">
 @csrf
 @error('content')
- <tr class="comment-error"><th>Error</th>
+ <tr class><th="comment-error">Error</th>
  <td class="comment-message">{{$message}}</td></tr>
  @enderror
 <textarea name="content" placeholder="感想コメントを書きましょう" class="comment-box"></textarea>
