@@ -75,14 +75,14 @@
 <p class="comment-paragraph">コメントを書く</p>
 <form action="{{ route('post.comment', $post->id) }}" method ="post" autocomplete="off">
 @csrf
+<textarea name="content" placeholder="感想コメントを書きましょう" class="comment-box"></textarea>
+<button type="submit" class="comment-button">追加</button>
 @error('content')
 <table class="comment-errorbox">
  <tr><th class="comment-error">Error</th>
  <td class="comment-message">{{$message}}</td></tr>
  </table>
  @enderror
-<textarea name="content" placeholder="感想コメントを書きましょう" class="comment-box"></textarea>
-<button type="submit" class="comment-button">追加</button>
 </form>
 <div class="tip-button">
 @auth
