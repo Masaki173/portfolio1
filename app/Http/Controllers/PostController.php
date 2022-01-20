@@ -88,7 +88,11 @@ class PostController extends Controller
       $like->delete();
          return redirect()->back();
     }
-    public function storeComment(CommentRequest $request, $id){
+    public function storeComment(Request $request, $id){
+        $validate_rule = [
+        'content' =>'required'
+        ];
+        $this->validate($request, $validate_rule);
       Comment::create(
         array(
           'user_id' => Auth::id(),
@@ -141,7 +145,11 @@ class PostController extends Controller
         return redirect('/')->with('success', "購読が完了しました。");
   }
 
-  public function doneTipPayment(TipRequest $request, $id){
+  public function doneTipPayment(Request $request, $id){
+      $validate_rule = [
+        'price' =>'required'
+        ];
+        $this->validate($request, $validate_rule);
     $post = Post::find($id);
     \Stripe\Stripe::setApiKey(\Config::get('payment.stripe_secret_key'));
     try {
