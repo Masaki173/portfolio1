@@ -39,15 +39,15 @@
 </form>
 @endif
 @else
-<h2>{!! nl2br(e($post->content))!!}</h2>
-@endif
-@else
 <h2 class="restricted-content">{{Str::limit($post->content, 60,'...')}}</h2>
 <p class="limit-line">--------この投稿をお読みいただくには購読が必要です--------</p>
 <form action="{{ route('register') }}" method="get" class="text-center mt-5">
   <button>お支払い</button>
 </form>
 @endauth
+@else
+<h2>{!! nl2br(e($post->content))!!}</h2>
+@endif
 <p class = "like-paragraph">投稿にいいねを押しましょう</p>
 @auth
   @if($post->is_liked_by_auth_user())
