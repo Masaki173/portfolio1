@@ -94,7 +94,7 @@ class PostController extends Controller
         $messages = [
             'content.required' => 'コメントの本文をご記入ください。',
             ];
-        $validator = Vaidator::make($request->all(), $rules, $messages);
+        $validator = Validator::make($request->all(), $rules, $messages);
          if($validator->fails()){
              return redirect(route('post.show', ['id' => $id,]))
                ->withErrors($validator)
