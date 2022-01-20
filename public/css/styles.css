@@ -261,6 +261,11 @@ margin-left:auto;
   width: 80px;
   height: 30px;
 }
+.comment-errorbox{
+   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
 .comment-error{
      display: block;
      margin-left: 40%;
