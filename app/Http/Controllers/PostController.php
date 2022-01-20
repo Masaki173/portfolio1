@@ -89,10 +89,18 @@ class PostController extends Controller
          return redirect()->back();
     }
     public function storeComment(Request $request, $id){
-        $validate_rule = [
-        'content' =>'required'
+        $rules = [
+        'content' =>'required',
         ];
-        $this->validate($request, $validate_rule);
+        $messages = [
+            'content.required' => 'コメントの本文をご記入ください。',
+            ];
+        $validator = Varidator::make($request->all(), $rules, $messages);
+         if(validator->fails()){
+             return redirect(route('post.show', ['id' => $id,]))
+               ->withErrors($validator)
+                ->withInput();
+         }
       Comment::create(
         array(
           'user_id' => Auth::id(),
@@ -146,10 +154,20 @@ class PostController extends Controller
   }
 
   public function doneTipPayment(Request $request, $id){
-      $validate_rule = [
-        'price' =>'required'
+        $rules = [
+        'price' =>'required',
+        'price' => 'integer',
         ];
-        $this->validate($request, $validate_rule);
+        $messages = [
+            'price.required' => '値段をご記入ください。',
+            'price.integer' => '整数値でご記入ください。',
+            ];
+        $validator = Varidator::make($request->all(), $rules, $messages);
+         if(validator->fails()){
+             return redirect(route('payment.tip', ['id' => $id,]))
+               ->withErrors($validator)
+                ->withInput();
+         }
     $post = Post::find($id);
     \Stripe\Stripe::setApiKey(\Config::get('payment.stripe_secret_key'));
     try {
