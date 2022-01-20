@@ -47,6 +47,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function accounts(){
+    return $this->hasMany('App\Models\LinkedSocialAccount');
+    }
+    
     public function follows()
     {
         return $this->belongsToMany('App\Models\User', 'follower_user', 'follower_id', 'user_id');
