@@ -30,7 +30,7 @@
                             <form action="{{route('tip.done', $post->id)}}" method="POST">
                                             @csrf
                                             <label>￥<input type="tel" minlength="3" name="price"></input> JPY</label>
-                                             @error('')
+                                             @error('price')
  　　　　　　　　　　　　　　　　　　　　　　　<tr><th>Error</th>
  　　　　　　　　　　　　　　　　　　　　　　　<td>{{$message}}</td></tr>
  　　　　　　　　　　　　　　　　　　　　　　　@enderror
