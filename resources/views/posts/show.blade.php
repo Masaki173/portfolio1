@@ -76,7 +76,7 @@
 <textarea name="content" placeholder="感想コメントを書きましょう" class="comment-box"></textarea>
  @error('content')
  <tr class="comment-error"><th>Error</th>
- <td>{{$message}}</td></tr>
+ <td class="comment-message">{{$message}}</td></tr>
  @enderror
 <button type="submit" class="comment-button">追加</button>
 </form>
