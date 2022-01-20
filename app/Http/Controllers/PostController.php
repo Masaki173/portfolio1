@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Requests\PostRequest;
+use App\Http\Requests\ArticleRequest;
 use App\Http\Requests\TipRequest;
 use App\Http\Requests\CommentRequest;
 use App\Models\User;
@@ -26,7 +26,7 @@ class PostController extends Controller
     {
         return view('posts.create');
     }
-    public function store(PostRequest $request)
+    public function store(ArticleRequest $request)
     {
         Post::create(
             array(
