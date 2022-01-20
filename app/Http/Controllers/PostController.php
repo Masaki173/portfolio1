@@ -96,7 +96,7 @@ class PostController extends Controller
             'content.required' => 'コメントの本文をご記入ください。',
             ];
         $validator = Varidator::make($request->all(), $rules, $messages);
-         if(validator->fails()){
+         if($validator->fails()){
              return redirect(route('post.show', ['id' => $id,]))
                ->withErrors($validator)
                 ->withInput();
@@ -163,7 +163,7 @@ class PostController extends Controller
             'price.integer' => '整数値でご記入ください。',
             ];
         $validator = Varidator::make($request->all(), $rules, $messages);
-         if(validator->fails()){
+         if($validator->fails()){
              return redirect(route('payment.tip', ['id' => $id,]))
                ->withErrors($validator)
                 ->withInput();
