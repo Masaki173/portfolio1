@@ -267,9 +267,15 @@ margin-left:auto;
   margin-right: auto;
 }
 .comment-error{
-    font-size:20px;
+    font-size:15px;
+     text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 .comment-message{
-    font-size:20px;
+    font-size:15px;
+     text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 }
