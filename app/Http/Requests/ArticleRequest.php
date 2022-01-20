@@ -6,14 +6,9 @@ use Illuminate\Foundation\Http\ArticleRequest;
 
 class ArticleRequest extends FormRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     *
-     * @return bool
-     */
     public function authorize()
     {
-        if ($this->path() == 'create'){
+        if ($this->path() == 'store'){
             return true;
         } else {
             return false;
