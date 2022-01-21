@@ -19,18 +19,25 @@ class UserController extends Controller
         return view('users.setting', compact('user'));
     }
     public function update(Request $request, $id){
+         $icon = $request->file('icon');
+        if(!$icon){
          $user = User::find($id);
          $user->profile = $request->profile;
+         $user->name = $request->name;
         $user->save();
            return redirect('/');
-        $icon = $request->file('icon');
-        if($icon && $icon->isValid()){
+        }else{
+        if($icon->isValid()){
             $filePath = $icon->store('public');
             $user->icon = str_replace('public/', '', $filePath);
         }else{
             return;
         }
+             $user->profile = $request->profile;
+         $user->name = $request->name;
+        $user->save();
       return redirect('/');
+        }
     }
     public function Follow($id){
         $user = User::with('posts')->findorFail($id);
