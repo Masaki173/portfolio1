@@ -26,7 +26,7 @@ class User extends Authenticatable
         'email',
         'password',
         'icon',
-        
+        'profile',
         'stripe_code',
     ];
 
