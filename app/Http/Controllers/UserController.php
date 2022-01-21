@@ -27,9 +27,11 @@ class UserController extends Controller
         }else{
             return;
         }
+        $form = $request->name;
+        unset($form['_token']);
         $user->name = $request->name;
         $user->profile = $request->profile;
-        $user->save();
+        $user->fill($form)->save();
     
       return redirect('/');
     }
