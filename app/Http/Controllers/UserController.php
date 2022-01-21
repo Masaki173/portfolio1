@@ -20,8 +20,6 @@ class UserController extends Controller
     }
     public function update(Request $request, $id){
          $user = User::findorFail($id);
-         $form = $request->all();
-         unset($form['_token']);
         $icon = $request->file('icon');
         if($icon && $icon->isValid()){
             $filePath = $icon->store('public');
@@ -30,7 +28,7 @@ class UserController extends Controller
             return;
         }
         $user->profile = $request->profile;
-        $user->fill($form)->save();
+        $user->save();
     
       return redirect('/');
     }
