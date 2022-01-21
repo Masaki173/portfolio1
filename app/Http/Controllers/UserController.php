@@ -27,6 +27,7 @@ class UserController extends Controller
         $user->save();
            return redirect('/');
         }else{
+         $icon = $request->file('icon');
         if($icon->isValid()){
             $filePath = $icon->store('public');
             $user->icon = str_replace('public/', '', $filePath);
