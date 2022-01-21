@@ -29,7 +29,6 @@ class UserController extends Controller
         }
         $form = $request->name;
         unset($form['_token']);
-        $user->name = $request->name;
         $user->profile = $request->profile;
         $user->fill($form)->save();
     
