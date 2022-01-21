@@ -22,6 +22,7 @@ class UserController extends Controller
          $user = User::find($id);
          $user->profile = $request->profile;
         $user->save();
+           return redirect('/');
         $icon = $request->file('icon');
         if($icon && $icon->isValid()){
             $filePath = $icon->store('public');
