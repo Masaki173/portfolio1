@@ -15,11 +15,11 @@ class UserController extends Controller
         return view('users.show', compact('user', 'is_followed'));
     }
     public function form($id){
-        $user = User::findorFail($id);
+        $user = Auth::user();
         return view('users.setting', compact('user'));
     }
     public function update(Request $request, $id){
-        $user = User::find($id);
+         $user = User::findorFail($id);
         $icon = $request->file('icon');
         if($icon && $icon->isValid()){
             $filePath = $icon->store('public');
