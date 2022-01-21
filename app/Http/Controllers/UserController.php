@@ -21,7 +21,7 @@ class UserController extends Controller
     public function update(Request $request, $id){
         $user = User::find($id);
         $icon = $request->file('icon');
-        if($icon->isValid()){
+        if($icon && $icon->isValid()){
             $filePath = $icon->store('public');
             $user->icon = str_replace('public/', '', $filePath);
         }else{
