@@ -1,7 +1,7 @@
 @extends('layouts.posts')
 @section('title', 'myapp')
 @section('content')
-<form action="update/{{$user->id}}" method ="post" enctype="multipart/form-data" class="user-detail">
+<form action="users/{{$user->id}}/update" method ="post" enctype="multipart/form-data" class="user-detail">
   @method('put')
   @csrf
   <label>アイコン選択:  <input type="file"  name="icon" accept="icon/png, icon/jpeg, icon/jpg"></input></label>
