@@ -19,9 +19,7 @@ class UserController extends Controller
         return view('users.setting', compact('user'));
     }
     public function update(Request $request, $id){
-         $user = User::findorFail($id);
-        $user->profile = $request->profile;
-        $user->save();
+         $user = User::find($id);
         $icon = $request->file('icon');
         if($icon && $icon->isValid()){
             $filePath = $icon->store('public');
@@ -29,7 +27,8 @@ class UserController extends Controller
         }else{
             return;
         }
-    
+   　　 $user->profile = $request->profile;
+        $user->save();
       return redirect('/');
     }
     public function Follow($id){
