@@ -27,8 +27,9 @@ class UserController extends Controller
         }else{
             return;
         }
+        $user->name = $request->name;
         $user->profile = $request->profile;
-        $user->save();
+        $user->update();
     
       return redirect('/');
     }
