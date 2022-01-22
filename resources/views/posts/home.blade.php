@@ -25,7 +25,18 @@
 @foreach ($items as $item)
 <table>
 <tr><th><a href="/posts/{{$item->id}}">{{$item->title}}</a></th></tr>
+@auth
+@if(Auth::user()->id !== $item->user->id && $item->is_fee === 1 && !$item->is_subscribed_by_auth_user())
+<tr><td><p class="restricted-content">{{Str::limit($item->content, 60,'...')}}</p></td></tr>
+@else
 <tr><td><p>{{Str::limit($item->content, 60,'...')}}</p></td></tr>
+@endif
+@else
+@if($item->is_fee === 1)
+<tr><td><p class="restricted-content">{{Str::limit($item->content, 60,'...')}}</p></td></tr>
+@else
+<tr><td><p>{{Str::limit($item->content, 60,'...')}}</p></td></tr>
+@endauth
 <tr>
 <td>
  @if($item->category_code === 1)
