@@ -49,7 +49,7 @@ class Post extends Model
              }
     }
     public function subscriptions(){
-      return $this->hasMany('App\Models\Subscription');
+      return $this->hasMany('App\Models\PostSubscription');
     }
     public function is_subscribed_by_auth_user(){
       $id = Auth::id();
