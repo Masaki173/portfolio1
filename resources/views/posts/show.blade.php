@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<!--@if (session('status'))
+@if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
@@ -10,7 +10,7 @@
                         <div class="alert alert-success" role="alert">
                             {{ session('success') }}
                         </div>
-@endif-->
+@endif
 <h1 class="title">{!! nl2br(e($post->title))!!}</h1>
 @if($post->category_code === 1)
 <a href="/{{$post->category_code}}" class="category-url">生活</a>
