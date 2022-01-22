@@ -41,6 +41,7 @@
 @else
 <h2>{!! nl2br(e($post->content))!!}</h2>
 @endif
+
 @endauth
 
 
