@@ -23,6 +23,7 @@
 @elseif($post->category_code === 5)
 <a href="/{{$post->category_code}}" class="category-url">エンタメ</a>
 @endif
+@auth
 @if($post->is_fee === 1 && !$post->is_subscribed_by_auth_user() && $post->user->id !== Auth::user()))
 @if(is_null(Auth::user()->stripe_code))
 <h2 class="restricted-content">{{Str::limit($post->content, 60,'...')}}</h2>
@@ -40,7 +41,7 @@
 @else
 <h2>{!! nl2br(e($post->content))!!}</h2>
 @endif
-
+@endauth
 
 
 <p class = "like-paragraph">投稿にいいねを押しましょう</p>
