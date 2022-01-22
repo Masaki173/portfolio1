@@ -39,7 +39,7 @@ Route::post('payment/tip/done/{id}', 'App\Http\Controllers\PostController@doneTi
 Route::get('/payment/form','App\Http\Controllers\PaymentController@getPaymentForm')->name('payment.form')->middleware('auth');
 Route::post('/payment/store', 'App\Http\Controllers\PaymentController@storePaymentInfo')->name('payment.store')->middleware('auth');
 Route::post('/payment/destroy','App\Http\Controllers\PaymentController@deletePaymentInfo')->name('payment.destroy')->middleware('auth');
-Route::get('/{category_id}', 'App\Http\Controllers\PostController@filter_categories');
+Route::get('/category/{category_id}', 'App\Http\Controllers\PostController@filter_categories');
 Route::get('/category/trend', 'App\Http\Controllers\PostController@popular_posts');
 Route::post('category/edit', 'App\Http\Controllers\PostController@editCategory');
 Route::post('/like/{id}','App\Http\Controllers\PostController@switchLike')->name('like_post')->middleware('auth');
