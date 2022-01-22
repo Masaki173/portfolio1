@@ -23,7 +23,7 @@
 @elseif($post->category_code === 5)
 <a href="/{{$post->category_code}}" class="category-url">エンタメ</a>
 @endif
-@if($post->is_fee === 1 && !$post->is_subscribed_by_auth_user() && $post->user->id !== Auth::user()->id )
+@if($post->is_fee === 1 && !$post->is_subscribed_by_auth_user())
 @auth
 @if(is_null(Auth::user()->stripe_code))
 <h2 class="restricted-content">{{Str::limit($post->content, 60,'...')}}</h2>
