@@ -42,7 +42,7 @@
 <h2>{!! nl2br(e($post->content))!!}</h2>
 @endif
 @else
-@if($post->is_fee === 1 && !$post->is_subscribed_by_auth_user())
+@if($post->is_fee === 1)
 <h2 class="restricted-content">{{Str::limit($post->content, 60,'...')}}</h2>
 <p class="limit-line">--------この投稿をお読みいただくには無料登録と購読が必要です--------</p>
 <form action="{{ route('register') }}" method="get" class="text-center mt-5">
