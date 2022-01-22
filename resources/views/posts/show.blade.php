@@ -28,7 +28,6 @@
 @if($post->user->id !== Auth::user()->id && is_null(Auth::user()->stripe_code))
 <h2 class="restricted-content">{{Str::limit($post->content, 60,'...')}}</h2>
 <p class="limit-line">--------この投稿をお読みいただくには購読が必要です--------</p>
-<!--<form action="{{ route('payment.form') }}" method="get" class="text-center mt-5">-->
 <form>
   <button>お支払い</button>
 </form> 
@@ -90,7 +89,6 @@
 @if($post->user->id !== Auth::user()->id && !$post->is_tipped_by_auth_user())
 @if(is_null(Auth::user()->stripe_code))
 <p class="tip-paragraph">チップを投げる</p>
-<!--<form action="{{ route('payment.form') }}" method="get" class="tip-button">-->
 <form>
 <input type="submit" value="&#xf004;" class="fas fa-yen-sign">
 </form>
