@@ -23,8 +23,8 @@
 @elseif($post->category_code === 5)
 <a href="/{{$post->category_code}}" class="category-url">エンタメ</a>
 @endif
-@if($post->is_fee === 1 && !$post->is_subscribed_by_auth_user())
 @auth
+@if($post->is_fee === 1 && !$post->is_subscribed_by_auth_user())
 @if($post->user->id !== Auth::user()->id && is_null(Auth::user()->stripe_code))
 <h2 class="restricted-content">{{Str::limit($post->content, 60,'...')}}</h2>
 <p class="limit-line">--------この投稿をお読みいただくには購読が必要です--------</p>
@@ -39,15 +39,15 @@
 </form>
 @endif
 @else
+<h2>{!! nl2br(e($post->content))!!}</h2>
+@endif
+@else
 <h2 class="restricted-content">{{Str::limit($post->content, 60,'...')}}</h2>
 <p class="limit-line">--------この投稿をお読みいただくには購読が必要です--------</p>
 <form action="{{ route('register') }}" method="get" class="text-center mt-5">
   <button>お支払い</button>
 </form>
 @endauth
-@else
-<h2>{!! nl2br(e($post->content))!!}</h2>
-@endif
 
 
 <p class = "like-paragraph">投稿にいいねを押しましょう</p>
