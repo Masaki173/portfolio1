@@ -36,7 +36,7 @@
 <tr><td><p class="restricted-content">{{Str::limit($item->content, 60,'...')}}</p></td></tr>
 @else
 <tr><td><p>{{Str::limit($item->content, 60,'...')}}</p></td></tr>
-
+@endif
 @endauth
 <tr>
 <td>
