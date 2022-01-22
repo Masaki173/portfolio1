@@ -13,15 +13,15 @@
 @endif
 <h1 class="title">{!! nl2br(e($post->title))!!}</h1>
 @if($post->category_code === 1)
-<a href="/category/{{$post->category_code}}" class="category-url">生活</a>
+<a href="/categories/{{$post->category_code}}" class="category-url">生活</a>
 @elseif($post->category_code === 2)
-<a href="/category/{{$post->category_code}}" class="category-url">社会</a>
+<a href="/categories/{{$post->category_code}}" class="category-url">社会</a>
 @elseif($post->category_code === 3)
-<a href="/category/{{$post->category_code}}" class="category-url">カルチャー</a>
+<a href="/categories/{{$post->category_code}}" class="category-url">カルチャー</a>
 @elseif($post->category_code === 4)
-<a href="/category/{{$post->category_code}}" class="category-url">テクノロジー</a>
+<a href="/categories/{{$post->category_code}}" class="category-url">テクノロジー</a>
 @elseif($post->category_code === 5)
-<a href="/category/{{$post->category_code}}" class="category-url">エンタメ</a>
+<a href="/categories/{{$post->category_code}}" class="category-url">エンタメ</a>
 @endif
 @auth
 @if(Auth::user()->id !== $post->user->id && $post->is_fee === 1 && !$post->is_subscribed_by_auth_user())
