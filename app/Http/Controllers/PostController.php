@@ -135,7 +135,7 @@ class PostController extends Controller
             ];
 
             $charge = \Stripe\Charge::create($chargeOject);
-            PostSubscription::create(
+            postSubscription::create(
               array(
                 'user_id' => Auth::id(),
                 'post_id' => $id,
