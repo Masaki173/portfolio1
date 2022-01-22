@@ -12,7 +12,7 @@ use App\Models\Like;
 use App\Models\Comment;
 use App\Models\Payment;
 use App\Models\Tip;
-use App\Models\Subscription;
+use App\Models\PostSubscription;
 
 class PostController extends Controller
 {
@@ -135,7 +135,7 @@ class PostController extends Controller
             ];
 
             $charge = \Stripe\Charge::create($chargeOject);
-            postSubscription::create(
+            PostSubscription::create(
               array(
                 'user_id' => Auth::id(),
                 'post_id' => $id,
