@@ -5,11 +5,11 @@
   <div class="category">
   <a href="/">すべて</a>
   <a href="/category/trend">人気</a>
-  <a href="/1">生活</a>
-  <a href="/2">社会</a>
-  <a href="/3">カルチャー</a>
-  <a href="/4">テクノロジー</a>
-  <a href="/5">エンタメ</a>
+  <a href="/categories/1">生活</a>
+  <a href="/categories/2">社会</a>
+  <a href="/categories/3">カルチャー</a>
+  <a href="/categories/4">テクノロジー</a>
+  <a href="/categories/5">エンタメ</a>
 </div>
 @if (session('status'))
                         <div class="alert alert-success" role="alert">
