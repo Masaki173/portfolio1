@@ -58,8 +58,8 @@ class LoginController extends Controller
         }else{
 
             $newuser = User::create([
-            'name' = $userSocial->getName(),
-            'email' = $userSocial->getEmail(),
+            'name' => $userSocial->getName(),
+            'email' => $userSocial->getEmail(),
         ]);
 
 
