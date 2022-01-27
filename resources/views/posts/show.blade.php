@@ -66,8 +66,8 @@
   <form action="{{ route('like_post', $post->id) }}" method="post" class = "like-button">
   @csrf
   <input type="submit" value="&#xf004;" class="far fa-heart">
-  <span class="badge">{{$post->likes->count()}}</span>
 </form>
+<span class="badge">{{$post->likes->count()}}</span>
   @endif
   @else
   <form action="{{ route('register') }}" method="get" class="like-button"> 
