@@ -22,7 +22,6 @@ class SocialAccountController extends Controller
 
         $authUser = $accountService->findOrCreate(
             $user,
-            $user->getEmail(),
             $provider
         );
 
