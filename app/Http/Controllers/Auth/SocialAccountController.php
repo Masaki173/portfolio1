@@ -15,8 +15,7 @@ class SocialAccountController extends Controller
     {
 
         try {
-            $userSocial = \Socialite::with($provider)->user();
-            $user = User::where(['email' => $userSocial->getEmail()])->first();
+            $user = \Socialite::with($provider)->user();
         } catch (\Exception $e) {
             return redirect('/login');
         }
