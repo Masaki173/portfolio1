@@ -25,7 +25,7 @@ Route::get('register/{provider}/callback','App\Http\Controllers\Auth\UserControl
 Route::get('create', 'App\Http\Controllers\PostController@create');
 Route::post('store', 'App\Http\Controllers\PostController@store');
 Route::get('/posts/{id}', 'App\Http\Controllers\PostController@show')->name('post.show');
-Route::delete('/posts/del/{id}', 'App\Http\Controllers\PostController@destroy');
+Route::delete('/posts/del/{id}', 'App\Http\Controllers\PostController@destroy')->('post.delete');
 Route::post('/comment/{id}', 'App\Http\Controllers\PostController@storeComment')->name('post.comment')->middleware('auth');
 Route::get('/users/{id}', 'App\Http\Controllers\UserController@show')->name('user.show');
 Route::get('users/{id}/form', 'App\Http\Controllers\UserController@form');
