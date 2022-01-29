@@ -74,7 +74,7 @@ class User extends Authenticatable
         return $this->hasMany('App\Models\Comment');
     }
     public function post_subscriptions(){
-         return $this->hasMany('App\Models\Subscription');
+         return $this->hasMany('App\Models\PostSubscription');
     }
     public function tips()
     {
