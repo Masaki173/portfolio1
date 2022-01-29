@@ -16,8 +16,20 @@ table{
   background-color:#F0F8FF;
   margin-left:40px;
 }
-.social{
-text-align: center;
+.social-login{
+  display:flex;
+  justify-content: space-between;
+  position: relative;
+  bottom:8px;
+}
+.login-f{
+ margin-bottom:20px;
+}
+.login-t{
+ margin-bottom:20px;
+}
+.login-g{
+ margin-bottom:20px;
 }
 .social-register{
 display:flex;
