@@ -12,6 +12,7 @@ table{
   display: -webkit-box;
   -webkit-box-pack: center;
   word-break: break-all;
+    border: 1px solid #222
 }
 .social{
 text-align: center;
