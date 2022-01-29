@@ -9,11 +9,10 @@ table{
   padding:0 px;
   margin-bottom:20px;
   /* word-break: all; */
-  display: flex;
+  display: webkit-box;
   -webkit-box-pack: center;
   word-break: break-all;
   background-color:#F0F8FF;
-  justify-content: center;
 }
 .social{
 text-align: center;
