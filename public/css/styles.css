@@ -13,6 +13,7 @@ table{
   -webkit-box-pack: center;
   word-break: break-all;
   background-color:#F0F8FF;
+  justify-content: space-between;
 }
 .social{
 text-align: center;
