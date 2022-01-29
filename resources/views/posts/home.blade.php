@@ -28,12 +28,14 @@
 @auth
 @if(Auth::user()->id !== $item->user->id && $item->is_fee === 1 && !$item->is_subscribed_by_auth_user())
 <tr><td><p class="restricted-content">{{Str::limit($item->content, 60,'...')}}</p></td></tr>
+<p>この記事は有料記事です</p>
 @else
 <tr><td><p>{{Str::limit($item->content, 60,'...')}}</p></td></tr>
 @endif
 @else
 @if($item->is_fee === 1)
 <tr><td><p class="restricted-content">{{Str::limit($item->content, 60,'...')}}</p></td></tr>
+<p>この記事は有料記事です</p>
 @else
 <tr><td><p>{{Str::limit($item->content, 60,'...')}}</p></td></tr>
 @endif
