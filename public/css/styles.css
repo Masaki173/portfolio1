@@ -2,6 +2,10 @@
   margin:20px;
   text-align: center;
 }
+.userposts{
+  display:flex;
+  justify-content: space-around; 
+}
 table{
   width:50%;
   float:left;
