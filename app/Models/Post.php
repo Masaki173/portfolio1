@@ -55,7 +55,7 @@ class Post extends Model
       $id = Auth::id();
 
       $subscribers = array();
-      foreach($this->subscriptions as $subscription) {
+      foreach($this->post_subscriptions as $subscription) {
         array_push($subscribers, $subscription->user_id);
       }
       if (in_array($id, $subscribers)) {
