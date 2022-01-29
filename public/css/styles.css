@@ -2,15 +2,19 @@
   margin:20px;
   text-align: center;
 }
+.userposts{
+   display:flex;
+   justify-content: space-evenly;
+}
 table{
   width:50%;
   float:left;
   font-size:30px; 
-  padding:0 px;
+  padding:0 15px;
   margin-bottom:20px;
   /* word-break: all; */
-  display: -webkit-box;
-  -webkit-box-pack: center;
+/*   display: -webkit-box;
+  -webkit-box-pack: center; */
   word-break: break-all;
   background-color:#F0F8FF;
 }
