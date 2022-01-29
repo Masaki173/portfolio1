@@ -48,7 +48,7 @@ class Post extends Model
             return $query->where('category_code', $category_id);
              }
     }
-    public function subscriptions(){
+    public function post_subscriptions(){
       return $this->hasMany('App\Models\PostSubscription');
     }
     public function is_subscribed_by_auth_user(){
