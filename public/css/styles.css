@@ -7,12 +7,13 @@ table{
   float:left;
   font-size:30px; 
   padding:0 15px;
+  border:1px #008080 solid;
   margin-bottom:20px;
   /* word-break: all; */
   display: -webkit-box;
   -webkit-box-pack: center;
   word-break: break-all;
-    border: 1px #008080 solid;
+   
 }
 .social{
 text-align: center;
