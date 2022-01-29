@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="userpost">
+<div class="contents">
   <div class="category">
   <a href="/">すべて</a>
   <a href="/category/trend">人気</a>
@@ -22,6 +22,7 @@
                             {{ session('success') }}
                         </div>
 @endif
+<div class= "userposts">
 @foreach ($items as $item)
 <table>
 <tr><th><a href="/posts/{{$item->id}}">{{$item->title}}</a></th></tr>
@@ -62,6 +63,7 @@
 </tr>
 </table>
 @endforeach
+</div>
 </div>
 @endsection
 
