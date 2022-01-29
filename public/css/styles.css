@@ -12,7 +12,7 @@ table{
   display: -webkit-box;
   -webkit-box-pack: center;
   word-break: break-all;
-    border: 1px solid #008080;
+    border: 1px #008080 solid;
 }
 .social{
 text-align: center;
