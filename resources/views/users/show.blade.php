@@ -31,7 +31,7 @@
 <td>
 @auth
   @if ($post->user_id === Auth::user()->id)
-<form action="posts/del/{{$post->id}}" method="post">
+<form action="/posts/del/{{$post->id}}" method="post">
  @method('delete')
  @csrf
   <input type="hidden" name="id">
