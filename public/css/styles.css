@@ -13,8 +13,8 @@ table{
   -webkit-box-pack: center;
   word-break: break-all;
   background-color:#F0F8FF;
-  margin-right:5px;
-  margin-left:5px;
+  margin-right:1px;
+  margin-left:1px;
 }
 .social{
 text-align: center;
