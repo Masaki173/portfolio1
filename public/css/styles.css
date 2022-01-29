@@ -2,7 +2,9 @@
   margin:20px;
   text-align: center;
 }
-
+userposts{
+  margin:0 auto;
+}
 table{
   width:45%;
   float:left;
