@@ -9,7 +9,7 @@ table{
   font-size:30px; 
   padding:0 15px;
   margin-bottom:20px;
-  /* word-break: all; */
+  word-break: all;
   display: -webkit-box;
   -webkit-box-pack: center;
   word-break: break-all;
