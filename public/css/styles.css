@@ -2,9 +2,7 @@
   margin:20px;
   text-align: center;
 }
-userposts{
-  text-align: center;
-}
+
 table{
   width:45%;
   float:left;
@@ -16,7 +14,7 @@ table{
   -webkit-box-pack: center;
   word-break: break-all;
   background-color:#F0F8FF;
-  margin-left:10px;
+  margin-left:20px;
 }
 .social{
 text-align: center;
