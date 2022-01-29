@@ -21,13 +21,15 @@ class UserController extends Controller
     public function update(Request $request, $id){
         $user = User::find($id);
          $icon = $request->file('icon');
+        $name = $request->name;
+        $profile = $request->profile;
         if(!$icon){
-          if($request->has('profile')){
-         $user->profile = $request->profile;
-          }
-             if($request->has('name')){
+          if($name){
          $user->name = $request->name;
              }
+          if($profile){
+         $user->profile = $request->profile;
+          }
         $user->save();
            return redirect('/');
         }else{
@@ -37,12 +39,12 @@ class UserController extends Controller
         }else{
             return;
         }
-             if($request->has('profile')){
-             $user->profile = $request->profile;
-             }
-               if($request->has('name')){
+              if($name){
          $user->name = $request->name;
                }
+             if($profile){
+             $user->profile = $request->profile;
+             }
         $user->save();
       return redirect('/');
         }
