@@ -13,7 +13,7 @@ table{
   display: -webkit-box;
   -webkit-box-pack: center;
   word-break: break-all;
-   
+  background-color:#F0F8FF;
 }
 .social{
 text-align: center;
