@@ -22,8 +22,12 @@ class UserController extends Controller
         $user = User::find($id);
          $icon = $request->file('icon');
         if(!$icon){
+          if($request->has('profile'){
          $user->profile = $request->profile;
+          }
+             if($request->has('name'){
          $user->name = $request->name;
+             }
         $user->save();
            return redirect('/');
         }else{
@@ -33,8 +37,12 @@ class UserController extends Controller
         }else{
             return;
         }
+             if($request->has('profile'){
              $user->profile = $request->profile;
+             }
+               if($request->has('name'){
          $user->name = $request->name;
+               }
         $user->save();
       return redirect('/');
         }
