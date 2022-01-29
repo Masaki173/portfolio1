@@ -2,10 +2,6 @@
   margin:20px;
   text-align: center;
 }
-.userposts{
-  display:flex;
-  justify-content: center;
-}
 table{
   width:50%;
   float:left;
