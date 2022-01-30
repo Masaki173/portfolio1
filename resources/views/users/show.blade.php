@@ -27,8 +27,8 @@
 @foreach ($user->posts as $post)
 <table class="users-post">
 <tr><th><a href="/posts/{{$post->id}}">{{$post->title}}</a></th></tr>
-@if($item->is_fee === 1)
-<tr><td align="left"><p>￥{{$item->price}}</p></td></tr>
+@if($post->is_fee === 1)
+<tr><td align="left"><p>￥{{$post->price}}</p></td></tr>
 @endif
 <tr>
 <td>
