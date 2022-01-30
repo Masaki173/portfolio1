@@ -26,10 +26,9 @@
 @foreach ($items as $item)
 <table>
 <tr><th><a href="/posts/{{$item->id}}">{{$item->title}}</a></th></tr>
-@if($item->is_fee === 1){
+@if($item->is_fee === 1)
 <tr><td><p>{{$item->price}}</p></td></tr>
-}else{
-}
+@endif
 <tr>
 <td>
  @if($item->category_code === 1)
