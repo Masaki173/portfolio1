@@ -15,8 +15,10 @@ table{
   word-break: break-all;
   background-color:#F0F8FF;
   margin-left:40px;
-  margin-top:40px;
 }
+.userposts{
+  margin-top:40px;
+  }
 .social-login{
   display:flex;
   justify-content: space-between;
