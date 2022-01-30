@@ -65,8 +65,8 @@ class PostController extends Controller
         $post = Post::find($id);
         $title = $request->title;
         $content = $request->content;
-        $is_fee = $request->is_fee;
-        $price = $request->price;
+//         $is_fee = $request->is_fee;
+//         $price = $request->price;
         $category = $request->category;
           if($title){
             $post->title = $request->title;
@@ -74,26 +74,26 @@ class PostController extends Controller
          if($content){
              $post->content = $request->content;
              }
-        if($is_fee){
-             $post->is_fee = $request->is_fee;
-            if($is_fee === 1){
-             $rules = [
-        'price' =>'required',
-        ];
-        $messages = [
-            'price.required' => '値段を入力してください。',
-            ];
-        $validator = Validator::make($request->all(), $rules, $messages);
-         if($validator->fails()){
-             return redirect(route('post.show', ['id' => $id,]))
-               ->withErrors($validator)
-                ->withInput();
-         }
-             }
-             }
-        if($price){
-            $post->price = $request->price;
-        }
+//         if($is_fee){
+//              $post->is_fee = $request->is_fee;
+//             if($is_fee === 1){
+//              $rules = [
+//         'price' =>'required',
+//         ];
+//         $messages = [
+//             'price.required' => '値段を入力してください。',
+//             ];
+//         $validator = Validator::make($request->all(), $rules, $messages);
+//          if($validator->fails()){
+//              return redirect(route('post.show', ['id' => $id,]))
+//                ->withErrors($validator)
+//                 ->withInput();
+//          }
+//              }
+//              }
+//         if($price){
+//             $post->price = $request->price;
+//         }
         if($category){
             $post->category_code = $request->category;
         }
