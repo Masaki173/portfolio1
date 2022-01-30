@@ -25,4 +25,16 @@
 </span>
   <button type=submit>追加</button>
  </form>
+ @error('title')
+ <tr><th>Error</th>
+ <td>{{$message}}</td></tr>
+ @enderror
+ @error('content')
+ <tr><th>Error</th>
+ <td>{{$message}}</td></tr>
+ @enderror
+ @error('is_fee')
+ <tr><th>Error</th>
+ <td>{{$message}}</td></tr>
+ @enderror
 @endsection
