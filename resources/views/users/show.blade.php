@@ -27,21 +27,9 @@
 @foreach ($user->posts as $post)
 <table class="users-post">
 <tr><th><a href="/posts/{{$post->id}}">{{$post->title}}</a></th></tr>
-@auth
-@if(Auth::user()->id !== $post->user->id && $post->is_fee === 1 && !$post->is_subscribed_by_auth_user())
-<tr><td><p class="restricted-content">{{Str::limit($post->content, 60,'...')}}</p></td></tr>
-<tr><td><p>この記事は有料記事です</p></td></tr>
-@else
-<tr><td><p>{{Str::limit($post->content, 60,'...')}}</p></td></tr>
+@if($item->is_fee === 1)
+<tr><td align="left"><p>￥{{$item->price}}</p></td></tr>
 @endif
-@else
-@if($post->is_fee === 1)
-<tr><td><p class="restricted-content">{{Str::limit($post->content, 60,'...')}}</p></td></tr>
-<tr><td><p>この記事は有料記事です</p></td></tr>
-@else
-<tr><td><p>{{Str::limit($post->content, 60,'...')}}</p></td></tr>
-@endif
-@endauth
 <tr>
 <td>
 @auth
