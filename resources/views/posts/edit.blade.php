@@ -1,6 +1,6 @@
 @extends('layouts.creations')
 @section('content')
-<form action="update/{id}" method ="post" autocomplete="off">
+<form action="update/{{$post->id}}" method ="post" autocomplete="off">
   @method('put')
   @csrf
    <input type="text"  name="title" value="{{$post->title}}"></input>
