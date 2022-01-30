@@ -28,7 +28,7 @@
 <table class="users-post">
 <tr><th><a href="/posts/{{$post->id}}">{{$post->title}}</a></th></tr>
 @if($post->is_fee === 1)
-<tr><td align="left"><p>￥{{$post->price}}</p></td></tr>
+<tr><td align="left"><p class="post-price">￥{{$post->price}}</p></td></tr>
 @endif
 <tr>
 <td>
