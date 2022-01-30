@@ -24,8 +24,8 @@ Route::get('register/{provider}','App\Http\Controllers\Auth\UserController@redir
 Route::get('register/{provider}/callback','App\Http\Controllers\Auth\UserController@handleProviderCallback');
 Route::get('create', 'App\Http\Controllers\PostController@create');
 Route::post('store', 'App\Http\Controllers\PostController@store');
-Route::get('/posts/edit', 'App\Http\Controllers\PostController@edit');
-Route::put('update', 'App\Http\Controllers\PostController@update');
+Route::get('/posts/edit/{id}', 'App\Http\Controllers\PostController@edit');
+Route::put('update/{id}', 'App\Http\Controllers\PostController@update');
 Route::get('/posts/{id}', 'App\Http\Controllers\PostController@show')->name('post.show');
 Route::delete('/posts/del/{id}', 'App\Http\Controllers\PostController@destroy')->name('post.delete');
 Route::post('/comment/{id}', 'App\Http\Controllers\PostController@storeComment')->name('post.comment')->middleware('auth');
