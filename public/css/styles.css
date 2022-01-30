@@ -14,6 +14,7 @@ table{
   display: -webkit-box;
   -webkit-box-pack: center;
   word-break: break-all;
+  word-wrap: break-all;
   background-color:#F0F8FF;
   margin-left:40px;
 }
