@@ -68,8 +68,22 @@ class PostController extends Controller
         $is_fee = $request->is_fee;
         $price = $request->price;
         $category = $request->category;
-        
-        $post->fill($form)->save();
+             if($title){
+         $post->name = $request->title;
+               }
+          if($content){
+             $post->content = $request->content;
+             }
+        if($is_fee){
+             $post->is_fee = $request->content;
+             }
+        if($price){
+            $post->price = $request->price;
+        }
+        if($category){
+            $post->category_code = $request->category;
+        }
+        $post->save();
         return redirect('/');
     }
     public function destroy($id){
