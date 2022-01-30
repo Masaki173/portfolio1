@@ -75,9 +75,8 @@ class PostController extends Controller
              $post->content = $request->content;
              }
         if($is_fee){
-             $post->is_fee = $request->content;
-            　if($is_fee === 1)
-             {
+             $post->is_fee = $request->is_fee;
+            if($is_fee === 1){
              $rules = [
         'price' =>'required',
         ];
