@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+<div class="contents">
 <h1 class="username"><img src="{{ Storage::url($user->icon)}}" width="40px" height="40px">{{$user->name}}</h1>
 <p class="profile">{{$user->profile}}</p>
 @auth
@@ -62,5 +63,6 @@
 </tr>
 </table>
 @endforeach
+</div>
 </div>
 @endsection
