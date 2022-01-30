@@ -27,7 +27,7 @@
 <table>
 <tr><th><a href="/posts/{{$item->id}}">{{$item->title}}</a></th></tr>
 @if($item->is_fee === 1){
-<tr><td><p>¥{{$item->price}}</p></td></tr>
+<tr><td><p>{{$item->price}}</p></td></tr>
 }
 <tr>
 <td>
