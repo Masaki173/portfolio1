@@ -304,6 +304,5 @@ margin-left:auto;
  margin-left:550px;
 }
 .post-price{
-  float:left;
-  padding-right:50px;
+  align:left;
 }
