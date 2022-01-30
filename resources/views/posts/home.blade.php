@@ -58,7 +58,7 @@
 </tr>
 <tr>
 <td>
-  <a href="users/{{$item->user->id}}"><img src="{{ Storage::url($item->user->icon)}}"  width="35px" height="35px">{{$item->user->name}}</a>
+  <a href="users/{{$item->user->id}}"><img src="{{ Storage::url($item->user->icon)}}"  width="30px" height="30px">{{$item->user->name}}</a>
 </td>
 </tr>
 </table>
