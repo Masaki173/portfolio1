@@ -80,13 +80,10 @@ margin-left:auto;
   padding-top: 50px;
   
 }
-/* .show-posts{
-  width:50%;
-  display:flex;
-  text-align: center;
-
+.show-posts{
+margin-top:20px;
   
-} */
+}
 .user-detail{
   text-align:center;
 }
