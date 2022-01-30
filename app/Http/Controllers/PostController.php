@@ -61,7 +61,7 @@ class PostController extends Controller
         $post = Post::find($id);
         return view('posts.edit', compact('post'));
     }
-    public function update(PostRequest $request, $id){
+    public function update(ArticleRequest $request, $id){
         $post = Post::find($id);
         $form = $request->all();
         unset($form['_token']);
