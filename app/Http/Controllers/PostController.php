@@ -63,26 +63,6 @@ class PostController extends Controller
     }
     public function update(Request $request, $id){
         $post = Post::find($id);
-      　$title = $request->title;
-        $content = $request->content;
-        $is_fee = $request->is_fee;
-        $price = $request->price;
-        $category = $request->category;
-             if($title){
-         $post->name = $request->title;
-               }
-          if($content){
-             $post->content = $request->content;
-             }
-        if($is_fee){
-             $post->is_fee = $request->content;
-             }
-        if($price){
-            $post->price = $request->price;
-        }
-        if($category){
-            $post->category_code = $request->category;
-        }
         $post->save();
         return redirect('/');
     }
