@@ -278,7 +278,7 @@ margin-left:auto;
   width: 80px;
   height: 30px;
 }
-.edit-post{
+.edit-button{
   font-size: 70%;
   width: 80px;
   height: 30px;
@@ -312,7 +312,7 @@ margin-left:auto;
   background-color:white;
   margin-left:350px;
 }
-.edit-button{
+.edit-post{
   background-color:white;
   margin-left:350px;
 }
