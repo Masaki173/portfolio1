@@ -25,7 +25,7 @@
 <div class= "userposts">
 @foreach ($items as $item)
 <table class="userspost">
-<tr><th><a href="/posts/{{$item->id}}">{{$item->title}}</a></th></tr>
+<tr><th><a href="/posts/{{$item->id}}">{{Str::limit($item->title, 60,'...')}}}}</a></th></tr>
 @if($item->is_fee === 1)
 <tr><td align="left"><p>￥{{$item->price}}</p></td></tr>
 @endif
