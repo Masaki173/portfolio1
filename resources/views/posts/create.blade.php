@@ -39,7 +39,7 @@
 有料
 </label>
 <span id="pricing-form">
-<label>￥<input type="tel" id="priceForm" minlength="3" name="price" value="100" style="height:30px; font-size: 70%;"></input> JPY</label>
+<label>￥<input type="tel" id="priceForm" minlength="3" name="price" value="100" style="height:30px; font-size: 70%;" required></input> JPY</label>
 </td></tr>
 <tr><td>
 </span>
