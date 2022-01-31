@@ -3,7 +3,7 @@
 <form action="store" method ="post" autocomplete="off">
   @csrf
   <table class="create-post">
-  <tr><th><input type="text"  name="title" style="height:35px; font-size: 60%;"></input></th>
+  <tr><th><input type="text"  name="title" style="height:35px; width:250px; font-size: 60%;"></input></th>
    @error('title')
  <tr><th>Error</th>
  <td>{{$message}}</td></tr>
