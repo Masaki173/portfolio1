@@ -3,12 +3,12 @@
 <form action="store" method ="post" autocomplete="off">
   @csrf
   <table class="create-post">
-  <tr><th><input type="text"  name="title" height="30"></input></th>
+  <tr><th><input type="text"  name="title" style="height:30px;"></input></th>
    @error('title')
  <tr><th>Error</th>
  <td>{{$message}}</td></tr>
  @enderror
-  <tr><td><textarea name="content" height="100"></textarea></td></tr>
+  <tr><td><textarea name="content" style="height:100px;"></textarea></td></tr>
    @error('content')
  <tr><th>Error</th>
  <td>{{$message}}</td></tr>
