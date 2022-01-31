@@ -24,7 +24,7 @@
 @endif
 <div class= "userposts">
 @foreach ($items as $item)
-<table>
+<table class="userspost">
 <tr><th><a href="/posts/{{$item->id}}">{{$item->title}}</a></th></tr>
 @if($item->is_fee === 1)
 <tr><td align="left"><p>￥{{$item->price}}</p></td></tr>
