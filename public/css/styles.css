@@ -306,7 +306,7 @@ margin-left:auto;
 .post-price{
   float:left;
 }
-.create-post{
+.create-post .edit-post{
   background-color:white;
   margin-left:400px;
 }
