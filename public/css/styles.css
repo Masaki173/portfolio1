@@ -310,5 +310,6 @@ margin-left:auto;
   background-color:white;
 }
 .create-content{
-   text-align:center;
+ margin-right:auto; 
+ margin-left:auto;
 }
