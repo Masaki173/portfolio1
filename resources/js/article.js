@@ -13,7 +13,7 @@ console.log('radioFee');
   　　　　　var form_value = priceForm.value;
   　　if (form_value.match(/[0-9]+/g) != form_value ) {
   	document.getElementById('alert').innerHTML = '数値でお値段を入力してください';
-    form.value = '';
+    PriceForm.value = '';
   }
       });
   }
