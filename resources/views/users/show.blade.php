@@ -25,7 +25,7 @@
  @endauth
  <div class="show-posts">
 @foreach ($user->posts as $post)
-<table class="users-post">
+<table class="userspost">
 <tr><th><a href="/posts/{{$post->id}}">{{$post->title}}</a></th></tr>
 @if($post->is_fee === 1)
 <tr><td align="left"><p class="post-price">￥{{$post->price}}</p></td></tr>
