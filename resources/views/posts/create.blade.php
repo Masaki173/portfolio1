@@ -3,12 +3,12 @@
 <form action="store" method ="post" autocomplete="off">
   @csrf
   <table class="create-post">
-  <tr><th><input type="text"  name="title" style="height:35px;"></input></th>
+  <tr><th><input type="text"  name="title" style="height:35px; font-size: 60%;"></input></th>
    @error('title')
  <tr><th>Error</th>
  <td>{{$message}}</td></tr>
  @enderror
-  <tr><td><textarea name="content" style="height:200px;"></textarea></td></tr>
+  <tr><td><textarea name="content" style="height:250px; width:250px;"></textarea></td></tr>
    @error('content')
  <tr><th>Error</th>
  <td>{{$message}}</td></tr>
@@ -31,7 +31,7 @@
 有料
 </label>
 <span id="pricing-form">
-<label>￥<input type="tel" minlength="3" name="price" style="height:30px;"></input> JPY</label>
+<label>￥<input type="tel" minlength="3" name="price" style="height:30px; font-size: 60%;"></input> JPY</label>
 </td></tr>
  @error('is_fee')
  <tr><th>Error</th>
