@@ -42,12 +42,12 @@
 </form>
 </td>
 </tr>
-<tr align="center">
+<tr>
 <td>
 <form action="/posts/edit/{{$post->id}}" method="get">
  @csrf
   <input type="hidden" name="id">
-  <button class="edit-post">編集する</button>
+  <button class="edit-button">編集する</button>
 </form>
 </td>
 </tr>
