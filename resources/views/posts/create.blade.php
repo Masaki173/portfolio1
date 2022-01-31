@@ -7,15 +7,13 @@
   <tr><th><input type="text"  name="title" style="height:35px; width:500px; font-size: 60%;"></input></th>
     <tr><td>
    @error('title')
- <tr><th>Error</th>
- <td>{{$message}}</td></tr>
+ <tr><td>Error:{{$message}}</td></tr>
  @enderror
  </td></tr>
   <tr><td><textarea name="content" style="height:250px; width:500px;"></textarea></td></tr>
       <tr><td>
    @error('content')
- <tr><th>Error</th>
- <td>{{$message}}</td></tr>
+ <tr><td>Error:{{$message}}</td></tr>
  @enderror
  </td></tr>
   <tr><td><select name="category">
@@ -41,8 +39,7 @@
 </td></tr>
  <tr><td>
  @error('is_fee')
- <tr><th>Error</th>
- <td>{{$message}}</td></tr>
+ <tr><td>Error:{{$message}}</td></tr>
  @enderror
 </td></tr>
 <tr><td>
