@@ -1,14 +1,14 @@
 @extends('layouts.creations')
 @section('content')
-<form action="store" method ="post" autocomplete="off">
+<form action="store" method ="post" autocomplete="off" class="create-content">
   @csrf
   <table class="create-post">
-  <tr><th><input type="text"  name="title" style="height:35px; width:250px; font-size: 60%;"></input></th>
+  <tr><th><input type="text"  name="title" style="height:35px; width:500px; font-size: 60%;"></input></th>
    @error('title')
  <tr><th>Error</th>
  <td>{{$message}}</td></tr>
  @enderror
-  <tr><td><textarea name="content" style="height:250px; width:250px;"></textarea></td></tr>
+  <tr><td><textarea name="content" style="height:250px; width:500px;"></textarea></td></tr>
    @error('content')
  <tr><th>Error</th>
  <td>{{$message}}</td></tr>
