@@ -49,10 +49,10 @@
   <input type="hidden" name="id">
   <button class="edit-post">編集する</button>
 </form>
-@endif
-@endauth
 </td>
 </tr>
+@endif
+@endauth
 </table>
 @endforeach
 </div>
