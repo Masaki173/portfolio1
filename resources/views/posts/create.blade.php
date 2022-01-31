@@ -31,7 +31,7 @@
 </td></tr>
   <tr><td>
   <label>
-  <input type="radio" class="radioFee"  name="is_fee" value="0"  onclick="priceSwitch()" checked>
+  <input type="radio" class="radioFee"  name="is_fee" value="0"  onclick="priceSwitch()">
 無料
 </label>
 <label>
