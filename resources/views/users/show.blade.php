@@ -30,10 +30,10 @@
 @if($post->is_fee === 1)
 <tr><td align="left"><p class="post-price">￥{{$post->price}}</p></td></tr>
 @endif
-<tr>
-<td>
 @auth
   @if ($post->user_id === Auth::user()->id)
+<tr>
+<td>
 <form action="/posts/del/{{$post->id}}" method="post">
  @method('delete')
  @csrf
