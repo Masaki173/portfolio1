@@ -315,9 +315,14 @@ margin-left:auto;
   margin-left:350px;
 }
 .create-content{
- margin-right:auto; 
- margin-left:auto;
+ margin-left:500px;
 }
 .create-form{
    text-align:center;
+}
+.edit-content{
+  margin-left:500px;
+}
+.edit-form{
+  text-align:center;
 }
