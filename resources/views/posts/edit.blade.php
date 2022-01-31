@@ -1,7 +1,7 @@
 @extends('layouts.creations')
 @section('content')
-
-<form action="/posts/update/{{$post->id}}" method ="post" autocomplete="off">
+<div class="edit-form">
+<form action="/posts/update/{{$post->id}}" method ="post" autocomplete="off" class="edit-content">
   @method('put')
   @csrf
   <table class="edit-post">
@@ -18,4 +18,5 @@
   <button type=submit>追加</button>
    </table>
  </form>
+ </div>
 @endsection
