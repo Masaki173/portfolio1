@@ -42,7 +42,7 @@
 </form>
 </td>
 </tr>
-<tr>
+<tr align="center">
 <td>
 <form action="/posts/edit/{{$post->id}}" method="get">
  @csrf
