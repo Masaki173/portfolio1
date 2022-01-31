@@ -5,8 +5,9 @@
   @method('put')
   @csrf
   <table class="edit-post">
-   <input type="text"  name="title" value="{{$post->title}}" style="height:35px; width:500px; font-size: 60%;"></input>
-  <textarea name="content" style="height:250px; width:500px; ">{{$post->content}}</textarea>
+   <tr><th><input type="text"  name="title" value="{{$post->title}}" style="height:35px; width:500px; font-size: 60%;"></input></th></tr>
+  <tr><td><textarea name="content" style="height:250px; width:500px; ">{{$post->content}}</textarea></td></tr>
+    <tr><td>
   <select name="category">
     <option value="1">生活</option>
     <option value="2">社会</option>
@@ -14,8 +15,10 @@
     <option value="4">テクノロジー</option>
     <option value="5">エンタメ</option>
   </select>
-    <label>
+    </td></tr>
+     <tr><td>
   <button type=submit>追加</button>
+   </td></tr>
    </table>
  </form>
  </div>
