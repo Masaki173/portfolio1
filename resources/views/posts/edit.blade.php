@@ -34,7 +34,7 @@
 無料
 </label>
 <label>
-  <input type="radio" class="radioFee"  name="is_fee" value="1" onclick="priceSwitch()" checked="checked">
+  <input type="radio" class="radioFee"  name="is_fee" value="{{$post->price}}" onclick="priceSwitch()" checked="checked">
 有料
 </label>
 <span id="pricing-form">
