@@ -11,7 +11,7 @@
  @enderror
  </td></tr>
   <tr><td><textarea name="content" style="height:250px; width:500px;"></textarea></td></tr>
-      <tr><td>
+      <tr style="margin-bottom:10px;"><td>
    @error('content')
  <tr><td>Error:{{$message}}</td></tr>
  @enderror
