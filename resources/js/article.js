@@ -9,10 +9,10 @@ console.log('radioFee');
       });
         radioFee[1].addEventListener('change', function (){
         formBox.style.display = "block";
-      });
-     if(priceForm ===""){
+             if(priceForm ===""){
             alert("お値段を入力してください");
             return false;
         }
+      });
   }
 
