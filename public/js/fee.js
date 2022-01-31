@@ -10,4 +10,4 @@ console.log('radioFee');
         formBox.style.display = "block";
       }
   }
-window.onload = entryChange1;
+window.onload = priceSwitch;
