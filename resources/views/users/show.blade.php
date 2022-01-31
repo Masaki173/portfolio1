@@ -40,6 +40,10 @@
   <input type="hidden" name="id">
   <button class="delete-post">削除する</button>
 </form>
+</td>
+</tr>
+<tr>
+<td>
 <form action="/posts/edit/{{$post->id}}" method="get">
  @csrf
   <input type="hidden" name="id">
