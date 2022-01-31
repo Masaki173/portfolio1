@@ -2,7 +2,7 @@
 @section('content')
 <form action="store" method ="post" autocomplete="off">
   @csrf
-  <table height="100%">
+  <table class="create-post">
   <tr><th><input type="text"  name="title"></input></th>
    @error('title')
  <tr><th>Error</th>
