@@ -1,5 +1,6 @@
 @extends('layouts.creations')
 @section('content')
+<div class="create-form">
 <form action="store" method ="post" autocomplete="off" class="create-content">
   @csrf
   <table class="create-post">
@@ -42,4 +43,5 @@
   <button type=submit>追加</button>
  </td></tr>
  </form>
+ </div>
  @endsection
