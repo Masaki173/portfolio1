@@ -13,14 +13,15 @@ use App\Models\Post;
 use App\Models\Payment;
 class PaymentController extends Controller
 {
-    public function getPaymentForm(Request $request){
+    public function getPaymentForm(Request $request, $id){
         $user = Auth::user();
-        return view('posts.payment.form', compact('user'));
+         $post = Post::with('user')->findorFail($id);
+        return view('posts.payment.form', compact('user', 'id'));
 
     }
 
 
-    public function storePaymentInfo(Request $request){
+    public function storePaymentInfo(Request $request, $id){
      
         $token = $request->stripeToken;
         $user = Auth::user(); //要するにUser情報を取得したい
