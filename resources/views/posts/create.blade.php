@@ -2,7 +2,7 @@
 @section('content')
 <div class="create-form">
 <form action="store" method ="post" autocomplete="off" class="create-content">
-<table>
+<table class="create-post" >
   @csrf
   <tr><td>
    @error('title')
