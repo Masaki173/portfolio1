@@ -16,7 +16,7 @@ class PaymentController extends Controller
     public function getPaymentForm(Request $request, $id){
         $user = Auth::user();
          $post = Post::with('user')->findorFail($id);
-        return view('posts.payment.form', compact('user', 'id'));
+        return view('posts.payment.form', compact('user', 'post'));
 
     }
 
@@ -59,7 +59,7 @@ class PaymentController extends Controller
         }
 
 
-        return redirect('/')->with("success", "カード情報の登録が完了しました。");
+       return redirect(route('post.show', ['id' => $id,]))->with("success", "カード情報の登録が完了しました。");
     }
 
 
