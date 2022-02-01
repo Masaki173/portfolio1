@@ -21,7 +21,7 @@ class PaymentController extends Controller
     }
 
 
-    public function storePaymentInfo(Request $request, $id){
+    public function storePaymentInfo(Request $request){
      
         $token = $request->stripeToken;
         $user = Auth::user(); //要するにUser情報を取得したい
