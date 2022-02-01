@@ -330,6 +330,7 @@ margin-left:auto;
 }
 .create-post{
   background-color:white;
+  float: none;
 }
 .edit-post{
   background-color:white;
