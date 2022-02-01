@@ -9,7 +9,7 @@
  <tr><td>Error:{{$message}}</td></tr>
  @enderror
  </td></tr>
-<div class="input-title"><input type="text"  name="title" placeholder="記事のタイトルを書きましょう" style="height:35px; width:500px; font-size: 70%;"></input></div>
+<div class="input-title"><input type="text"  name="title" placeholder="記事のタイトルを書きましょう" style="height:35px; width:500px;"></input></div>
    <tr><td>
    @error('content')
  <tr><td>Error:{{$message}}</td></tr>
