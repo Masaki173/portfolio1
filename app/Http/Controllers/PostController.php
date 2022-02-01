@@ -161,11 +161,11 @@ class PostController extends Controller
             $body = $e->getJsonBody();
             $errors  = $body['error'];
 
-            return redirect('/')->with('errors', "決済に失敗しました。しばらく経ってから再度お試しください。");
+            return redirect(route('post.show', ['id' => $id,]))->with('errors', "決済に失敗しました。しばらく経ってから再度お試しください。");
         }
 
 
-        return redirect('/')->with('success', "購読が完了しました。");
+        return redirect(route('post.show', ['id' => $id,]))->with('success', "購読が完了しました。");
   }
 
   public function doneTipPayment(Request $request, $id){
@@ -206,7 +206,7 @@ class PostController extends Controller
   $body = $e->getJsonBody();
   $errors  = $body['error'];
 
-  return redirect('/')->with('errors', "決済に失敗しました。しばらく経ってから再度お試しください。");
+  return redirect(route('post.show', ['id' => $id,]))->with('errors', "決済に失敗しました。しばらく経ってから再度お試しください。");
 }
 
 
