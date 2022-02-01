@@ -47,15 +47,21 @@ display:flex;
   bottom:8px;
 }
 .register-f{
+   width:200px;
+   height:45px;
    display: inline-block;
     margin-top:20px;
   margin-bottom:20px;
 }
 .register-t{
+  width:200px;
+  height:45px;
  display: inline-block;
 margin-bottom:20px;
 }
 .register-g{
+  width:200px;
+  height:45px;
  display: inline-block;
 margin-bottom:20px;
 }
