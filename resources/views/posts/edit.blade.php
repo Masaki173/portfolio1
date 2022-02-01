@@ -4,10 +4,9 @@
 <form action="/posts/update/{{$post->id}}" method ="post" autocomplete="off" class="edit-content">
   @method('put')
   @csrf
-  <table class="edit-post">
-   <tr><th><input type="text"  name="title" value="{{$post->title}}" style="height:35px; width:500px; font-size: 60%;"></input></th></tr>
-  <tr><td><textarea name="content" style="height:250px; width:500px; ">{{$post->content}}</textarea></td></tr>
-    <tr><td>
+ <div class="input-title"><input type="text"  name="title" value="{{$post->title}}" style="height:35px; width:500px; font-size: 60%;"></input></div>
+ <div class="input-content"><textarea name="content" style="height:250px; width:500px; ">{{$post->content}}</textarea></div>
+   <div class="select-category>
   <select name="category">
     <option value="1">生活</option>
     <option value="2">社会</option>
@@ -15,8 +14,8 @@
     <option value="4">テクノロジー</option>
     <option value="5">エンタメ</option>
   </select>
-    </td></tr>
-      <tr><td>
+    </div>
+      <div class="price-content">
  @if($post->is_fee === 0)
   <label>
   <input type="radio" class="radioFee"  name="is_fee" value="0"  onclick="priceSwitch()" checked="checked">
@@ -40,11 +39,10 @@
 <span id="pricing-form">
 <label>￥<input type="tel" id="priceForm" minlength="3" name="price" value="{{$post->price}}" style="height:30px; font-size: 70%;" required></input> JPY</label>
 @endif
-</td></tr>
-   <tr><td>
+</div>
+    <div class="add-content">
   <button type=submit>追加</button>
-   </td></tr>
-   </table>
+   </div>
  </form>
  </div>
 @endsection
