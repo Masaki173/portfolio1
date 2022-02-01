@@ -16,7 +16,7 @@ class PaymentController extends Controller
     public function getPaymentForm(Request $request){
         $user = Auth::user();
 //          $post = Post::with('user')->findorFail($id);
-        return view('posts.payment.form', compact('user', 'post'));
+        return view('posts.payment.form', compact('user'));
 
     }
 
