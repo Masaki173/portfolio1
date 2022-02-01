@@ -67,7 +67,7 @@
                                 </button>
                             </div>
                            </div>
-                           <div class="form-group row">
+                           <div class="form-group row social-a">
                              <label for="name" class="col-sm-4 col-form-label text-md-right"></label>
                           <div class="col-md-6">
                                <button class="social-register register-f"><a href="{{ url('register/facebook')}}" class="btn facebook"><i class="fab fa-facebook"></i> Facebookで登録</a></button>
