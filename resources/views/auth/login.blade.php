@@ -66,7 +66,7 @@
                         </div>
                          <div class="form-group row">
                         <label for="name" class="col-sm-4 col-form-label text-md-right"></label>
-                          <div class="col-md-6">
+                          <div class="col-md-6 social-a">
                                <button class="social-login login-f"><a href="{{ url('login/facebook')}}" class="btn facebook"><i class="fab fa-facebook"></i> Facebookでログイン</a></button>
                               <button class="social-login login-t"><a href="{{ url('login/twitter')}}" class="btn twitter"><i class="fab fa-twitter"></i> Twitterでログイン</a></button>
                               <button class="social-login login-g"><a href="{{ url('login/google')}}" class="btn google"><i class="fab fa-google"></i> Googleでログイン</a></button>
