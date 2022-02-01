@@ -6,7 +6,7 @@
   @csrf
  <div class="input-title"><input type="text"  name="title" value="{{$post->title}}" style="height:35px; width:500px;"></input></div>
  <div class="input-content"><textarea name="content" style="height:250px; width:500px; ">{{$post->content}}</textarea></div>
-   <div class="select-category>
+     <div class="select-category">
   <select name="category">
     <option value="1">生活</option>
     <option value="2">社会</option>
@@ -14,7 +14,7 @@
     <option value="4">テクノロジー</option>
     <option value="5">エンタメ</option>
   </select>
-    </div>
+  </div>
       <div class="price-content">
  @if($post->is_fee === 0)
   <label>
