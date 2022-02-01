@@ -38,8 +38,8 @@ Route::get('payment/index/{id}', 'App\Http\Controllers\PostController@getPayment
 Route::get('payment/tip/{id}', 'App\Http\Controllers\PostController@getTipPayment')->name('payment.tip')->middleware('auth');
 Route::post('/payment/done/{id}','App\Http\Controllers\PostController@donePayment')->name('payment.done')->middleware('auth');
 Route::post('payment/tip/done/{id}', 'App\Http\Controllers\PostController@doneTipPayment')->name('tip.done')->middleware('auth');
-Route::get('/payment/form','App\Http\Controllers\PaymentController@getPaymentForm')->name('payment.form')->middleware('auth');
-Route::post('/payment/store', 'App\Http\Controllers\PaymentController@storePaymentInfo')->name('payment.store')->middleware('auth');
+Route::get('/payment/form/{id}','App\Http\Controllers\PaymentController@getPaymentForm')->name('payment.form')->middleware('auth');
+Route::post('/payment/store/{id}', 'App\Http\Controllers\PaymentController@storePaymentInfo')->name('payment.store')->middleware('auth');
 Route::post('/payment/destroy','App\Http\Controllers\PaymentController@deletePaymentInfo')->name('payment.destroy')->middleware('auth');
 Route::get('/categories/{category_id}', 'App\Http\Controllers\PostController@filter_categories');
 Route::get('/category/trend', 'App\Http\Controllers\PostController@popular_posts');
