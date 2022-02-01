@@ -4,7 +4,7 @@
 <form action="/posts/update/{{$post->id}}" method ="post" autocomplete="off" class="edit-content">
   @method('put')
   @csrf
- <div class="input-title"><input type="text"  name="title" value="{{$post->title}}" style="height:35px; width:500px; font-size: 60%;"></input></div>
+ <div class="input-title"><input type="text"  name="title" value="{{$post->title}}" style="height:35px; width:500px;"></input></div>
  <div class="input-content"><textarea name="content" style="height:250px; width:500px; ">{{$post->content}}</textarea></div>
    <div class="select-category>
   <select name="category">
