@@ -28,6 +28,7 @@ table{
   bottom:8px;
 }
 .login-f{
+   margin-top:20px;
   display:inline-block;
  margin-bottom:20px;
 }
@@ -46,6 +47,7 @@ display:flex;
   bottom:8px;
 }
 .register-f{
+    margin-top:20px;
   display:inline-block;
   margin-bottom:20px;
 }
