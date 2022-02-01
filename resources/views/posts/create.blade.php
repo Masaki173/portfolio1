@@ -30,7 +30,7 @@
  <tr><td>Error:{{$message}}</td></tr>
  @enderror
 </td></tr>
-  <div class="select-isfee">
+  <div class="price-content">
   <label>
   <input type="radio" class="radioFee"  name="is_fee" value="0"  onclick="priceSwitch()" checked="checked">
 無料
