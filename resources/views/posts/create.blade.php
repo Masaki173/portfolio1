@@ -3,7 +3,6 @@
 <div class="create-form">
 <form action="store" method ="post" autocomplete="off" class="create-content">
   @csrf
-  <table class="create-post"> 
   <tr><td>
    @error('title')
  <tr><td>Error:{{$message}}</td></tr>
