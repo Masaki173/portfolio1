@@ -28,15 +28,21 @@ table{
   bottom:8px;
 }
 .login-f{
+  width:200px;
+  height:45px;
    display: inline-block;
    margin-top:20px;
  margin-bottom:20px;
 }
 .login-t{
+  width:200px;
+  height:45px;
  display: inline-block;
  margin-bottom:20px;
 }
 .login-g{
+ width:200px;
+ height:45px;
  display: inline-block;
  margin-bottom:20px;
 }
