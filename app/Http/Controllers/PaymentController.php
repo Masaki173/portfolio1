@@ -13,14 +13,14 @@ use App\Models\Post;
 use App\Models\Payment;
 class PaymentController extends Controller
 {
-    public function getPaymentForm(Request $request){
+    public function getPaymentForm(Request $request, $id){
         $user = Auth::user();
         return view('posts.payment.form', compact('user'));
 
     }
 
 
-    public function storePaymentInfo(Request $request){
+    public function storePaymentInfo(Request $request, $id){
      
         $token = $request->stripeToken;
         $user = Auth::user(); //要するにUser情報を取得したい
@@ -58,7 +58,7 @@ class PaymentController extends Controller
         }
 
 
-        return redirect('/')->with("success", "カード情報の登録が完了しました。");
+        return redirect(route('post.show', ['id' => $id,]))->with("success", "カード情報の登録が完了しました。");
     }
 
 
