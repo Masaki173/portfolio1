@@ -58,7 +58,7 @@ class PaymentController extends Controller
         }
 
 
-        return redirect(route('post.show', ['id' => $id,]))->with("success", "カード情報の登録が完了しました。");
+        return redirect('/')->with("success", "カード情報の登録が完了しました。");
     }
 
 
