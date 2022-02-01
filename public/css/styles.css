@@ -28,13 +28,16 @@ table{
   bottom:8px;
 }
 .login-f{
+   display: inline-block;
    margin-top:20px;
  margin-bottom:20px;
 }
 .login-t{
+ display: inline-block;
  margin-bottom:20px;
 }
 .login-g{
+ display: inline-block;
  margin-bottom:20px;
 }
 .social-register{
@@ -44,13 +47,16 @@ display:flex;
   bottom:8px;
 }
 .register-f{
+   display: inline-block;
     margin-top:20px;
   margin-bottom:20px;
 }
 .register-t{
+ display: inline-block;
 margin-bottom:20px;
 }
 .register-g{
+ display: inline-block;
 margin-bottom:20px;
 }
 td{
