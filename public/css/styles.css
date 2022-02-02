@@ -30,6 +30,8 @@ table{
 .login-f{
 /*   width:400px;
   height:35px; */
+    text-align:center;
+  background-color:#00008B;
    display: inline-block;
    margin-top:20px;
  margin-bottom:20px;
@@ -37,12 +39,16 @@ table{
 .login-t{
 /*   width:400px;
   height:35px; */
+ background-color:#5acee;
+ text-align:center;
  display: inline-block;
  margin-bottom:20px;
 }
 .login-g{
 /*  width:400px;
  height:35px; */
+  text-align:center;
+  background-color:#FF4500;
  display: inline-block;
  margin-bottom:20px;
 }
