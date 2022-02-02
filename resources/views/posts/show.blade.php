@@ -23,7 +23,7 @@
 @elseif($post->category_code === 5)
 <a href="/categories/{{$post->category_code}}" class="category-url">エンタメ</a>
 @endif
-<a href="/users/{{$post->user->id}}" class="post-icon"><img src="{{ Storage::url($post->user->icon)}}"  width="35px" height="35px">{{$post->user->name}}</a>
+<div class="icon-wrapper"><a href="/users/{{$post->user->id}}"><img src="{{ Storage::url($post->user->icon)}}"  width="35px" height="35px">{{$post->user->name}}</a></div>
 @auth
 @if(Auth::user()->id !== $post->user->id && $post->is_fee === 1 && !$post->is_subscribed_by_auth_user())
 @if(is_null(Auth::user()->stripe_code))
