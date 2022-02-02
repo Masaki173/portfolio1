@@ -61,7 +61,7 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
+                            <div class="col-md-6 button_wrapper">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
@@ -70,9 +70,9 @@
                            <div class="form-group row">
                              <label for="name" class="col-sm-4 col-form-label text-md-right"></label>
                           <div class="col-md-6 social-a">
-                               <button class="social-register register-f"><a href="{{ url('register/facebook')}}" class="btn facebook"><i class="fab fa-facebook"></i> Facebookで登録</a></button>
-                              <button class="social-register register-t"><a href="{{ url('register/twitter')}}" class="btn twitter"><i class="fab fa-twitter"></i> Twitterで登録</a></button>
-                              <button class="social-register register-g"><a href="{{ url('register/google')}}" class="btn google"><i class="fab fa-google"></i> Googleで登録</a></button>
+                               <div class="button_wrapper"><button class="social-register register-f"><a href="{{ url('register/facebook')}}" class="btn facebook"><i class="fab fa-facebook"></i> Facebookで登録</a></button></div>
+                              <div class="button_wrapper"><button class="social-register register-t"><a href="{{ url('register/twitter')}}" class="btn twitter"><i class="fab fa-twitter"></i> Twitterで登録</a></button></div>
+                              <div class="button_wrapper"><button class="social-register register-g"><a href="{{ url('register/google')}}" class="btn google"><i class="fab fa-google"></i> Googleで登録</a></button></div>
                          </div>
                         </div>
                     </form>
