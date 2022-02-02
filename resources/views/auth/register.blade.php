@@ -61,6 +61,7 @@
                         </div>
 
                         <div class="form-group row mb-0">
+                        <label for="name" class="col-sm-4 col-form-label text-md-right"></label>
                             <div class="col-md-6 button_wrapper">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
