@@ -105,7 +105,6 @@
 <div class="tip-wrapper"><input type="submit" value="&#xf004;" class="fas fa-yen-sign"></div>
 </form>
 @else
-<p class="tip-paragraph">チップを投げる</p>
 <form action="{{ route('payment.tip', $post->id) }}" method="get" class="tip-button">
 <div class="tip-wrapper"><input type="submit" value="&#xf157;" class="fas fa-yen-sign"></div>
 </form>
@@ -113,7 +112,6 @@
 @else
 @endif
 @else
-<p class="tip-paragraph">チップを投げる</p>
 <form action="{{ route('register') }}" method="get" class="tip-button">
 <input type="submit" value="&#xf157;" class="fas fa-yen-sign">
 </form>
