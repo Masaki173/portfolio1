@@ -95,6 +95,7 @@
 @csrf
  <div class="comment-wrapper"><textarea name="content" placeholder="感想コメントを書きましょう" class="comment-box"></textarea></div>
 <div class="comment-wrapper"><button type="submit" class="comment-button btn-primary">追加</button></div>
+</form>
 @endauth
 <div class="tip-button">
 <p class="tip-paragraph">チップを投げる</p>
