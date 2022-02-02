@@ -60,47 +60,54 @@
   @if($post->is_liked_by_auth_user())
   <form action="{{ route('unlike_post', $post->id) }}" method="post" class = "like-button">
   @csrf
-  <input type="submit" value="&#xf004;" class="fas fa-heart">
-  <span class="badge">{{$post->likes->count()}}</span>
+  <div class="like-wrapper"><input type="submit" value="&#xf004;" class="fas fa-heart">
+  <span class="badge">{{$post->likes->count()}}</span></div>
 </form>
   @else
   <form action="{{ route('like_post', $post->id) }}" method="post" class = "like-button">
   @csrf
-  <input type="submit" value="&#xf004;" class="far fa-heart">
-  <span class="badge">{{$post->likes->count()}}</span>
+  <div class="like-wrapper"><input type="submit" value="&#xf004;" class="far fa-heart">
+  <span class="badge">{{$post->likes->count()}}</span></div>
 </form>
   @endif
   @else
   <form action="{{ route('register') }}" method="get" class="like-button"> 
     @csrf
-    <input type="submit" value="&#xf004;" class="far fa-heart">
-  <span class="badge">{{$post->likes->count()}}</span>
+    <div class="like-wrapper"><input type="submit" value="&#xf004;" class="far fa-heart">
+  <span class="badge">{{$post->likes->count()}}</span></div>
   </form>
   @endauth
 <p class="comment-paragraph">コメントを書く</p>
+@auth
 <form action="{{ route('post.comment', $post->id) }}" method ="post" autocomplete="off">
 @csrf
-<textarea name="content" placeholder="感想コメントを書きましょう" class="comment-box"></textarea>
-<button type="submit" class="comment-button">追加</button>
+ <div class="comment-wrapper"><textarea name="content" placeholder="感想コメントを書きましょう" class="comment-box"></textarea></div>
+<div class="comment-wrapper"><button type="submit" class="comment-button">追加</button></div>
 @error('content')
-<table class="comment-errorbox">
+ <div class="comment-wrapper">
  <tr><th class="comment-error"><p>Error</p></th>
  <td class="comment-message"><p>{{$message}}</p></td></tr>
- </table>
+ </div>
  @enderror
 </form>
+@else
+<form action="{{ route('register') }}" method ="post" autocomplete="off">
+@csrf
+ <div class="comment-wrapper"><textarea name="content" placeholder="感想コメントを書きましょう" class="comment-box"></textarea></div>
+<div class="comment-wrapper"><button type="submit" class="comment-button">追加</button></div>
+@endauth
 <div class="tip-button">
+<p class="tip-paragraph">チップを投げる</p>
 @auth
 @if($post->user->id !== Auth::user()->id && !$post->is_tipped_by_auth_user())
 @if(is_null(Auth::user()->stripe_code))
-<p class="tip-paragraph">チップを投げる</p>
 <form action="{{ route('payment.form') }}" method="get" class="tip-button">
-<input type="submit" value="&#xf004;" class="fas fa-yen-sign">
+<div class="tip-wrapper"><input type="submit" value="&#xf004;" class="fas fa-yen-sign"></div>
 </form>
 @else
 <p class="tip-paragraph">チップを投げる</p>
 <form action="{{ route('payment.tip', $post->id) }}" method="get" class="tip-button">
-<input type="submit" value="&#xf157;" class="fas fa-yen-sign">
+<div class="tip-wrapper"><input type="submit" value="&#xf157;" class="fas fa-yen-sign"></div>
 </form>
 @endif
 @else
