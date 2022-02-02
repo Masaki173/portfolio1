@@ -30,9 +30,9 @@ table{
 .login-f{
 /*   width:400px;
   height:35px; */
-    color:wihte;
     text-align:center;
-  background-color:#00008B;
+    width: 100%;
+  height: calc(1.6em + 0.75rem + 2px);
    display: inline-block;
    margin-top:20px;
  margin-bottom:20px;
@@ -40,8 +40,8 @@ table{
 .login-t{
 /*   width:400px;
   height:35px; */
-  color:white;
- background-color:#00BFFF;
+   width: 100%;
+  height: calc(1.6em + 0.75rem + 2px);
  text-align:center;
  display: inline-block;
  margin-bottom:20px;
@@ -49,9 +49,9 @@ table{
 .login-g{
 /*  width:400px;
  height:35px; */
-   color:white;
+  width: 100%;
+  height: calc(1.6em + 0.75rem + 2px);
   text-align:center;
-  background-color:#FF4500;
  display: inline-block;
  margin-bottom:20px;
 }
