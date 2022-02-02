@@ -82,7 +82,7 @@
 <form action="{{ route('post.comment', $post->id) }}" method ="post" autocomplete="off">
 @csrf
  <div class="comment-wrapper"><textarea name="content" placeholder="感想コメントを書きましょう" class="comment-box"></textarea></div>
-<div class="comment-wrapper"><button type="submit" class="comment-button">追加</button></div>
+<div class="comment-wrapper"><button type="submit" class="comment-button btn-primary">追加</button></div>
 @error('content')
  <div class="comment-wrapper">
  <tr><th class="comment-error"><p>Error</p></th>
@@ -94,7 +94,7 @@
 <form action="{{ route('register') }}" method ="post" autocomplete="off">
 @csrf
  <div class="comment-wrapper"><textarea name="content" placeholder="感想コメントを書きましょう" class="comment-box"></textarea></div>
-<div class="comment-wrapper"><button type="submit" class="comment-button">追加</button></div>
+<div class="comment-wrapper"><button type="submit" class="comment-button btn-primary">追加</button></div>
 @endauth
 <div class="tip-button">
 <p class="tip-paragraph">チップを投げる</p>
