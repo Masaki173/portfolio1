@@ -35,7 +35,7 @@
 @else
 <h2 class="restricted-content">{{Str::limit($post->content, 60,'...')}}</h2>
 <p class="limit-line">--------この投稿をお読みいただくには購読が必要です--------</p>
-<form action="{{ route('payment.page', $post->id) }}" method="get" class="btn btn-primary text-center mt-5">
+<form action="{{ route('payment.page', $post->id) }}" method="get" class="text-center mt-5">
   <button class="btn btn-primary">お支払い</button>
 </form>
 @endif
@@ -46,7 +46,7 @@
 @if($post->is_fee === 1)
 <h2 class="restricted-content">{{Str::limit($post->content, 60,'...')}}</h2>
 <p class="limit-line">--------この投稿をお読みいただくには無料登録と購読が必要です--------</p>
-<form action="{{ route('register') }}" method="get" class="btn btn-primary text-center mt-5">
+<form action="{{ route('register') }}" method="get" class="text-center mt-5">
   <button class="btn btn-primary">お支払い</button>
 </form>
 @else
