@@ -103,11 +103,11 @@
 @if($post->user->id !== Auth::user()->id && !$post->is_tipped_by_auth_user())
 @if(is_null(Auth::user()->stripe_code))
 <form action="{{ route('payment.form') }}" method="get" class="tip-button">
-<div class="tip-wrapper"><input type="submit" value="&#xf004;" class="fas fa-yen-sign"></div>
+<input type="submit" value="&#xf004;" class="fas fa-yen-sign">
 </form>
 @else
 <form action="{{ route('payment.tip', $post->id) }}" method="get" class="tip-button">
-<div class="tip-wrapper"><input type="submit" value="&#xf157;" class="fas fa-yen-sign"></div>
+<input type="submit" value="&#xf157;" class="fas fa-yen-sign">
 </form>
 @endif
 @else
