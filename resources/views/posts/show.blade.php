@@ -98,14 +98,15 @@
 </form>
 @endauth
 <div class="tip-button">
-<p class="tip-paragraph">チップを投げる</p>
 @auth
 @if($post->user->id !== Auth::user()->id && !$post->is_tipped_by_auth_user())
 @if(is_null(Auth::user()->stripe_code))
+<p class="tip-paragraph">チップを投げる</p>
 <form action="{{ route('payment.form') }}" method="get" class="tip-button">
 <input type="submit" value="&#xf004;" class="fas fa-yen-sign">
 </form>
 @else
+<p class="tip-paragraph">チップを投げる</p>
 <form action="{{ route('payment.tip', $post->id) }}" method="get" class="tip-button">
 <input type="submit" value="&#xf157;" class="fas fa-yen-sign">
 </form>
@@ -113,6 +114,7 @@
 @else
 @endif
 @else
+<p class="tip-paragraph">チップを投げる</p>
 <form action="{{ route('register') }}" method="get" class="tip-button">
 <input type="submit" value="&#xf157;" class="fas fa-yen-sign">
 </form>
