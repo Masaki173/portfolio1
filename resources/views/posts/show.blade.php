@@ -91,7 +91,7 @@
  @enderror
 </form>
 @else
-<form action="{{ route('register') }}" method ="post" autocomplete="off">
+<form action="{{ route('register') }}" method ="get" autocomplete="off">
 @csrf
  <div class="comment-wrapper"><textarea name="content" placeholder="感想コメントを書きましょう" class="comment-box"></textarea></div>
 <div class="comment-wrapper"><button type="submit" class="comment-button btn-primary">追加</button></div>
