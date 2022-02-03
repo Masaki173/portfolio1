@@ -400,4 +400,5 @@ text-align:center;
   border-radius: 12px;
   background-color: white;
   max-width:1200px;
+  box-sizing:inherit;
 }
