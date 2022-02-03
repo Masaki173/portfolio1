@@ -418,11 +418,14 @@ text-align:center;
 .badge{
 color:black;
 }
-.comments-form{
+.comments-subject{
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
     color: rgba(0, 0, 0, 0.87);
     font-size: 20px;
     font-weight: bold;
     line-height: 1.6;
     padding: 0px 32px 4px;
+}
+.comment-forms{
+  float:left;
 }
