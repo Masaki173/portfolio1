@@ -391,9 +391,9 @@ margin-top: 20px;
 .like-wrapper{
 text-align:center;
 }
-.comment-wrapper{
+/* .comment-wrapper{
 float:left;
-}
+} */
 .first-wrapper{
  background-color:#F0F8FF;
 }
@@ -430,5 +430,6 @@ color:black;
     padding: 0px 32px 4px;
 }
 .comment-forms{
-  float:left;
+display:flex;
+justify-content: center;
 }
