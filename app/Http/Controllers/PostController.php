@@ -42,10 +42,7 @@ class PostController extends Controller
     }
     public function show($id){
       $post = Post::with('user')->findorFail($id);
-      $tips = Tip::with('user')->get();
-      $comments = Comment::with('user')->get();
-     
-      return view('posts.show', compact('post', 'comments' , 'tips'));
+      return view('posts.show', compact('post'));
     }
     public function filter_categories($category_id){
       $items =  Post::where('category_code', $category_id)->get();
