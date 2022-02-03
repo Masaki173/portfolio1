@@ -78,8 +78,9 @@
   @endauth
 </div>
 <div class="third-wrapper">
-<p class="comments-form">コメント</p>
+<p class="comments-subject">コメント</p>
 <p class="comment-paragraph">コメントをする</p>
+<div class="comment-forms">
 @auth
 <form action="{{ route('post.comment', $post->id) }}" method ="post" autocomplete="off">
 @csrf
@@ -121,6 +122,7 @@
 <input type="submit" value="&#xf157;" class="fas fa-yen-sign">
 </form>
 @endauth
+</div>
 </div>
 <div class="tips-row">
 @foreach ($tips as $tip)
