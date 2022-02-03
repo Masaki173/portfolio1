@@ -433,3 +433,6 @@ color:black;
 display:flex;
 justify-content: center;
 }
+.comment-btn{
+    margin-top:50px;
+}
