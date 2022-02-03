@@ -55,7 +55,7 @@
 @endif
 @endauth
 </div>
-<div clas="third-wrapper">
+<div class="third-wrapper">
 <p class = "like-paragraph">投稿にいいねを押しましょう</p>
 @auth
   @if($post->is_liked_by_auth_user())
