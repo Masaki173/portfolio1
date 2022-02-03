@@ -455,3 +455,6 @@ justify-content: center;
    border-top: 1px solid rgba(0, 0, 0, 0.12);
    padding: 4px 10px;
 }
+.only-comment{
+text-align:center;
+}
