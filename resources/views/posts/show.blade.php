@@ -54,8 +54,6 @@
 <h2>{!! nl2br(e($post->content))!!}</h2>
 @endif
 @endauth
-</div>
-<div class="third-wrapper">
 <p class = "like-paragraph">投稿にいいねを押しましょう</p>
 @auth
   @if($post->is_liked_by_auth_user())
@@ -78,6 +76,8 @@
   <span class="badge">{{$post->likes->count()}}</span></div>
   </form>
   @endauth
+</div>
+<div class="third-wrapper">
 <p class="comment-paragraph">コメントを書く</p>
 @auth
 <form action="{{ route('post.comment', $post->id) }}" method ="post" autocomplete="off">
