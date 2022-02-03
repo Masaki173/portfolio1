@@ -79,50 +79,53 @@
 </div>
 <div class="third-wrapper">
 <p class="comments-subject">コメント</p>
-<p class="comment-paragraph">コメントをする</p>
 <div class="comment-forms">
+ <div class="comment-wrapper">
+ <p class="comment-paragraph">コメントをする</p>
 @auth
 <form action="{{ route('post.comment', $post->id) }}" method ="post" autocomplete="off">
 @csrf
- <div class="comment-wrapper"><textarea name="content" placeholder="感想コメントを書きましょう" class="comment-box"></textarea></div>
-<div class="comment-wrapper"><button type="submit" class="comment-button btn btn-primary">追加</button></div>
+<textarea name="content" placeholder="感想コメントを書きましょう"></textarea></div>
+<div class="comment-wrapper"><button type="submit" class="btn btn-primary">追加</button>
 @error('content')
- <div class="comment-wrapper">
  <tr><th class="comment-error"><p>Error</p></th>
  <td class="comment-message"><p>{{$message}}</p></td></tr>
- </div>
  @enderror
 </form>
+ </div>
 @else
 <form action="{{ route('register') }}" method ="get" autocomplete="off">
 @csrf
- <div class="comment-wrapper"><textarea name="content" placeholder="感想コメントを書きましょう" class="comment-box"></textarea></div>
-<div class="comment-wrapper"><button type="submit" class="comment-button btn-primary">追加</button></div>
+<textarea name="content" placeholder="感想コメントを書きましょう"></textarea></div>
+<div class="comment-wrapper"><button type="submit" class="btn btn-primary">追加</button></div>
 </form>
+</div>
 @endauth
-<div class="tip-button">
+ <div class="comment-wrapper">
 @auth
 @if($post->user->id !== Auth::user()->id && !$post->is_tipped_by_auth_user())
 @if(is_null(Auth::user()->stripe_code))
 <p class="tip-paragraph">チップを投げてコメントをする</p>
-<form action="{{ route('payment.form') }}" method="get" class="tip-button">
+<form action="{{ route('payment.form') }}" method="get">
 <input type="submit" value="&#xf004;" class="fas fa-yen-sign">
 </form>
-@else
-<p class="tip-paragraph">チップを投げてコメントをする</p>
-<form action="{{ route('payment.tip', $post->id) }}" method="get" class="tip-button">
-<input type="submit" value="&#xf157;" class="fas fa-yen-sign">
-</form>
-@endif
-@else
-@endif
-@else
-<p class="tip-paragraph">チップを投げてコメントをする</p>
-<form action="{{ route('register') }}" method="get" class="tip-button">
-<input type="submit" value="&#xf157;" class="fas fa-yen-sign">
-</form>
-@endauth
 </div>
+@else
+<p class="tip-paragraph">チップを投げてコメントをする</p>
+<form action="{{ route('payment.tip', $post->id) }}" method="get">
+<input type="submit" value="&#xf157;" class="fas fa-yen-sign">
+</form>
+</div>
+@endif
+@else
+@endif
+@else
+<p class="tip-paragraph">チップを投げてコメントをする</p>
+<form action="{{ route('register') }}" method="get">
+<input type="submit" value="&#xf157;" class="fas fa-yen-sign">
+</form>
+</div>
+@endauth
 </div>
 <div class="tips-row">
 @foreach ($tips as $tip)
