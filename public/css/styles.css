@@ -395,5 +395,6 @@ text-align:center;
  background-color:#F0F8FF;
 }
 .second-wrapper{
+  display:block;
   background-color: transparent;
 }
