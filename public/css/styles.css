@@ -403,6 +403,7 @@ text-align:center;
  margin-right:auto; 
 margin-left:auto;
  padding-bottom:30px;
+ box-shadow: 0 2px 4px #4385bb12;
 }
 .third-wrapper{
    position: relative;
@@ -412,4 +413,5 @@ margin-left:auto;
   box-sizing:inherit;
  margin-right:auto; 
 margin-left:auto;
+  box-shadow: 0 2px 4px #4385bb12;
 }
