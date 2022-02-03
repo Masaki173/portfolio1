@@ -103,7 +103,7 @@
 @endauth
  <div class="comment-wrapper">
 @auth
-@if($post->user->id !== Auth::user()->id && !$post->is_tipped_by_auth_user())
+@if($post->user->id !== Auth::user()->id)
 @if(is_null(Auth::user()->stripe_code))
 <p class="tip-paragraph">チップを投げてコメントをする</p>
 <form action="{{ route('payment.form') }}" method="get">
