@@ -395,7 +395,9 @@ text-align:center;
  background-color:#F0F8FF;
 }
 .second-wrapper{
+   position: relative;
   display:block;
+  border-radius: 12px;
   background-color: white;
   max-width:1200px;
 }
