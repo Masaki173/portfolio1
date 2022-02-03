@@ -85,8 +85,8 @@
 @auth
 <form action="{{ route('post.comment', $post->id) }}" method ="post" autocomplete="off">
 @csrf
-<textarea name="content" placeholder="感想コメントを書きましょう"></textarea></div>
-<div class="comment-wrapper"><button type="submit" class="btn btn-primary">追加</button>
+<textarea name="content" placeholder="感想コメントを書きましょう"></textarea>
+<button type="submit" class="comment-btn btn btn-primary">追加</button>
 @error('content')
  <tr><th class="comment-error"><p>Error</p></th>
  <td class="comment-message"><p>{{$message}}</p></td></tr>
@@ -96,8 +96,8 @@
 @else
 <form action="{{ route('register') }}" method ="get" autocomplete="off">
 @csrf
-<textarea name="content" placeholder="感想コメントを書きましょう"></textarea></div>
-<div class="comment-wrapper"><button type="submit" class="btn btn-primary">追加</button></div>
+<textarea name="content" placeholder="感想コメントを書きましょう"></textarea>
+<button type="submit" class="comment-btn btn btn-primary">追加</button>
 </form>
 </div>
 @endauth
