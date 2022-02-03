@@ -403,4 +403,6 @@ text-align:center;
   max-width: 960px;
   box-sizing:inherit;
   justify-content: space-between;
+ margin-right:auto; 
+margin-left:auto;
 }
