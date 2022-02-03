@@ -270,18 +270,14 @@ margin-left:auto;
 
 }
 .tips-row{
-  width: 50%;
-  display:flex;
-  justify-content: space-between;
-/*   border: 2px solid #000000; */
-    margin-top: 30px;
+ margin-bottom: 16px;
+    word-wrap: break-word;
+    font-size: 1.4rem;
 }
 .comments-row{
-  width: 50%;
-  display:flex;
-  justify-content: space-between;
-/*   border: 2px solid #000000; */
-  margin-top: 20px;
+  margin-bottom: 16px;
+    word-wrap: break-word;
+    font-size: 1.4rem;
 }
 /* .tips-box{
   border-collapse: collapse;
@@ -457,4 +453,7 @@ justify-content: center;
 }
 .only-comment{
 text-align:center;
+}
+.css-comments{
+border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
