@@ -128,6 +128,7 @@
 @endauth
 </div>
 <div class="tips-row">
+<p>チップ付きのコメント</p>
 @foreach ($tips as $tip)
 <div class="comment-box">
 <div class="tip-info"><label>￥{{$tip->price}}</label>
@@ -138,6 +139,7 @@
 </div>
 @endforeach
 <div class="comments-row">
+<p>通常のコメント</p>
 @foreach ($comments as $comment)
 <div class="comment-box">
 <div class="comment-info">
