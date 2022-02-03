@@ -397,4 +397,5 @@ text-align:center;
 .second-wrapper{
   display:block;
   background-color: white;
+  max-width:1200px;
 }
