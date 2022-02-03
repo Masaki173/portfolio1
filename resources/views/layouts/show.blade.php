@@ -81,11 +81,11 @@
                 </div>
             </div>
         </nav>
-<div class="first-wrapper">
+<article class="first-wrapper">
         <main class="py-4">
             @yield('content')
         </main>
-</div>
+</article>
     </div>
     <script src="{{ mix('js/article.js') }}"></script>
     @if(request()->path()==='payment/form')
