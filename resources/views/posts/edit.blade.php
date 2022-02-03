@@ -4,8 +4,9 @@
 <form action="/posts/update/{{$post->id}}" method ="post" autocomplete="off" class="edit-content">
   @method('put')
   @csrf
- <div class="input-title"><input type="text"  name="title" value="{{$post->title}}" style="height:35px; width:500px;"></input></div>
- <div class="input-content"><textarea name="content" style="height:250px; width:500px; ">{{$post->content}}</textarea></div>
+ <div class="input-title"><input type="text"  name="title" class="title-form" value="{{$post->title}}" ></input></div>
+ <div class="input-content"><textarea name="content" class="content-form">{{$post->content}}</textarea></div>
+ <div class="post-type">
      <div class="select-category">
   <select name="category">
     <option value="1">生活</option>
@@ -44,5 +45,6 @@
   <button type=submit>追加</button>
    </div>
  </form>
+ </div>
  </div>
 @endsection
