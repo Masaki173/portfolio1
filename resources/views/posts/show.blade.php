@@ -131,6 +131,7 @@
 </div>
 @endauth
 </div>
+<section class="css-comments">
 <div class="tips-row">
 @foreach ($post->tips as $tip)
 <div class="comment-box">
@@ -140,7 +141,9 @@
 </div>
 </div>
 </div>
+</section>
 @endforeach
+<section class="css-comments">
 <div class="comments-row">
 @foreach ($post->comments as $comment)
 <div class="comment-box">
@@ -150,6 +153,7 @@
 </div>
 </div>
 </div>
+</section>
 @endforeach
 </div>
 @endsection
