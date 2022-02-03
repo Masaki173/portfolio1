@@ -16,6 +16,7 @@
  @enderror
  </td></tr>
 <div class="input-content"><textarea name="content" placeholder="記事の内容を書きましょう" class="content-form"></textarea></div>
+<div class="post-type">
   <div class="select-category">
   <select name="category">
     <option value="1">生活</option>
@@ -47,5 +48,6 @@
   <button type=submit>追加</button>
  </div>
  </form>
+ </div>
  </div>
  @endsection
