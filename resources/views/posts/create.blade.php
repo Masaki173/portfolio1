@@ -9,13 +9,13 @@
  <tr><td>Error:{{$message}}</td></tr>
  @enderror
  </td></tr>
-<div class="input-title"><input type="text"  name="title" placeholder="記事のタイトルを書きましょう" style="height:35px; width:500px;"></input></div>
+<div class="input-title"><input type="text"  name="title" placeholder="記事のタイトルを書きましょう" class="title-form"></input></div>
    <tr><td>
    @error('content')
  <tr><td>Error:{{$message}}</td></tr>
  @enderror
  </td></tr>
-<div class="input-content"><textarea name="content" placeholder="記事の内容を書きましょう" style="height:250px; width:500px;"></textarea></div>
+<div class="input-content"><textarea name="content" placeholder="記事の内容を書きましょう" class="content-form"></textarea></div>
   <div class="select-category">
   <select name="category">
     <option value="1">生活</option>
