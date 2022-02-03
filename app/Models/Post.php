@@ -40,6 +40,21 @@ class Post extends Model
     public function comments(){
         return $this->hasMany('App\Models\Comment');
     }
+     public function is_commented_by_auth_user()
+    {
+      $id = Auth::id();
+  
+      $likers = array();
+      foreach($this->comments as $comenter) {
+        array_push($commenters, $commenter->user_id);
+      }
+  
+      if (in_array($id, $commenters)) {
+        return true;
+      } else {
+        return false;
+      }
+    }
     public function tips(){
         return $this->hasMany('App\Models\Tip');
     }
