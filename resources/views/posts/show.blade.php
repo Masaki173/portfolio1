@@ -140,6 +140,7 @@
 <div class="comment-info">
 <p>{{$comment->user->name}}</p>
 <p>{{$comment->content}}</p>
+</div>
 @endforeach
 </div>
 </div>
