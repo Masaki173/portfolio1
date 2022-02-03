@@ -79,7 +79,7 @@
 </div>
 <div class="third-wrapper">
 <p class="comments-subject">コメント</p>
-@if($post->user->id === Auth::user()->id)
+@if($post->user->id !== Auth::user()->id)
 <div class="comment-forms">
 <div class="comment-wrapper">
 @else
