@@ -1,5 +1,4 @@
 @extends('layouts.app')
-<div class="first-wrapper">
 @section('content')
 <div class="second-wrapper">
 @if (session('status'))
@@ -141,4 +140,3 @@
 @endforeach
 </div>
 @endsection
-</div>
