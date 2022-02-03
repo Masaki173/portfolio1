@@ -54,8 +54,8 @@
 <h2>{!! nl2br(e($post->content))!!}</h2>
 @endif
 @endauth
-
-
+</div>
+<div clas="third-wrapper">
 <p class = "like-paragraph">投稿にいいねを押しましょう</p>
 @auth
   @if($post->is_liked_by_auth_user())
