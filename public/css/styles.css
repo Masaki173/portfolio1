@@ -400,7 +400,7 @@ text-align:center;
   display:block;
   border-radius: 12px;
   background-color: white;
-  max-width:1200px;
+  max-width: 960px;
   box-sizing:inherit;
   justify-content: space-between;
 }
