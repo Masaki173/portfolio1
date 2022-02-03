@@ -397,12 +397,12 @@ text-align:center;
 .second-wrapper{
    position: relative;
   display:block;
-  border-radius: 12px;
   background-color: white;
   max-width: 960px;
   box-sizing:inherit;
  margin-right:auto; 
 margin-left:auto;
+ padding-bottom:30px;
 }
 .third-wrapper{
    position: relative;
