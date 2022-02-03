@@ -243,12 +243,9 @@ width: 100%;
 }
 .comments-row{
   width: 50%;
-  float:left;
-  display: -webkit-box;
-  -webkit-box-pack: center;
-  word-break: break-all;
-  margin-top: 100px;
-  
+  display:flex;
+  justify-content: space-between;
+  border: 2px solid #000000;
   
 }
 .comment-user{
@@ -280,10 +277,9 @@ margin-left:auto;
 }
 .tips-row{
   width: 50%;
-  float:left;
-  display: -webkit-box;
-  -webkit-box-pack: center;
-  word-break: break-all;
+  display:flex;
+  justify-content: space-between;
+  border: 2px solid #000000;
 }
 .tips-box{
   border-collapse: collapse;
