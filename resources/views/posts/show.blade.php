@@ -133,15 +133,15 @@
 <p>{{$tip->user->name}}</p>
 <p>{{$tip->comment}}</p>
 </div>
-@endforeach
 </div>
+@endforeach
 <div class="comments-row">
 @foreach ($comments as $comment)
 <div class="comment-info">
 <p>{{$comment->user->name}}</p>
 <p>{{$comment->content}}</p>
 </div>
-@endforeach
 </div>
+@endforeach
 </div>
 @endsection
