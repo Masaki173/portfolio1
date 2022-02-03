@@ -451,3 +451,6 @@ justify-content: center;
      border: 0px;
     outline: 0px;
 }
+.post-type{
+   border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
