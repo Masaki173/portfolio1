@@ -79,8 +79,12 @@
 </div>
 <div class="third-wrapper">
 <p class="comments-subject">コメント</p>
+@if($post->user->id === Auth::user()->id)
 <div class="comment-forms">
 <div class="comment-wrapper">
+@else
+<div class="only-comment">
+@endif
  <p class="comment-paragraph">コメントをする</p>
 @auth
 <form action="{{ route('post.comment', $post->id) }}" method ="post" autocomplete="off">
