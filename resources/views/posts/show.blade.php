@@ -131,9 +131,9 @@
 </div>
 @endauth
 </div>
+@foreach ($post->tips as $tip)
 <section class="css-comments">
 <div class="tips-row">
-@foreach ($post->tips as $tip)
 <div class="comment-box">
 <div class="tip-info"><label>￥{{$tip->price}}</label>
 <p>{{$tip->user->name}}</p>
@@ -143,9 +143,9 @@
 </div>
 </section>
 @endforeach
+@foreach ($post->comments as $comment)
 <section class="css-comments">
 <div class="comments-row">
-@foreach ($post->comments as $comment)
 <div class="comment-box">
 <div class="comment-info">
 <p>{{$comment->user->name}}</p>
