@@ -1,6 +1,7 @@
 @extends('layouts.app')
+<div class="first-wrapper">
 @section('content')
-<div class="main-content">
+<div class="second-wrapper">
 @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
@@ -140,3 +141,4 @@
 @endforeach
 </div>
 @endsection
+</div>
