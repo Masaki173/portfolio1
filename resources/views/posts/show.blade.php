@@ -129,22 +129,18 @@
 </div>
 <div class="tips-row">
 @foreach ($tips as $tip)
-<div class="tip-box">
 <div class="tip-info"><label>￥{{$tip->price}}</label>
 <p>{{$tip->user->name}}</p>
 <p>{{$tip->comment}}</p>
-</div>
 </div>
 @endforeach
 </div>
 <div class="comments-row">
 @foreach ($comments as $comment)
-<div class="comment-box">
 <div class="comment-info">
 <p>{{$comment->user->name}}</p>
 <p>{{$comment->content}}</p>
-</div>
-</div>
 @endforeach
+</div>
 </div>
 @endsection
