@@ -391,6 +391,9 @@ margin-top: 20px;
 .like-wrapper{
 text-align:center;
 }
+.comment-wrapper{
+float:left;
+}
 .first-wrapper{
  background-color:#F0F8FF;
 }
