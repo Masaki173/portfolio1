@@ -78,7 +78,7 @@
   @endauth
 </div>
 <div class="third-wrapper">
-<p clss="comments-form">コメント</p>
+<p class="comments-form">コメント</p>
 <p class="comment-paragraph">コメントをする</p>
 @auth
 <form action="{{ route('post.comment', $post->id) }}" method ="post" autocomplete="off">
