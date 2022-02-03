@@ -140,8 +140,9 @@
 <div class="comments-row">
 @foreach ($comments as $comment)
 <div class="comment-box">
-<div class="comment-info"><p>{{$comment->user->name}}</p></td></tr>
-<tr><td class="comment-content"><p>{{$comment->content}}</p></th></tr>
+<div class="comment-info">
+<p>{{$comment->user->name}}</p>
+<p>{{$comment->content}}</p>
 </div>
 </div>
 @endforeach
