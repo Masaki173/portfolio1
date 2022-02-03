@@ -130,7 +130,7 @@
 <div class="tips-row">
 @foreach ($tips as $tip)
 <div class="tip-box">
-<div class="tip-info"><label>￥{{$tip->price}}</label></td></tr>
+<div class="tip-info"><label>￥{{$tip->price}}</label>
 <p>{{$tip->user->name}}</p>
 <p>{{$tip->comment}}</p>
 </div>
