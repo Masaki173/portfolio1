@@ -79,8 +79,8 @@
 </div>
 <div class="third-wrapper">
 <p class="comments-subject">コメント</p>
-<ul class="comment-forms">
-<li class="comment-wrapper">>
+<div class="comment-forms">
+<div class="comment-wrapper">
  <p class="comment-paragraph">コメントをする</p>
 @auth
 <form action="{{ route('post.comment', $post->id) }}" method ="post" autocomplete="off">
@@ -92,16 +92,16 @@
  <td class="comment-message"><p>{{$message}}</p></td></tr>
  @enderror
 </form>
- </li>
+ </div>
 @else
 <form action="{{ route('register') }}" method ="get" autocomplete="off">
 @csrf
 <textarea name="content" placeholder="感想コメントを書きましょう"></textarea></div>
 <div class="comment-wrapper"><button type="submit" class="btn btn-primary">追加</button></div>
 </form>
-</li>
+</div>
 @endauth
- <li class="comment-wrapper">
+ <div class="comment-wrapper">
 @auth
 @if($post->user->id !== Auth::user()->id && !$post->is_tipped_by_auth_user())
 @if(is_null(Auth::user()->stripe_code))
@@ -109,13 +109,13 @@
 <form action="{{ route('payment.form') }}" method="get">
 <input type="submit" value="&#xf004;" class="fas fa-yen-sign">
 </form>
-</li>
+</div>
 @else
 <p class="tip-paragraph">チップを投げてコメントをする</p>
 <form action="{{ route('payment.tip', $post->id) }}" method="get">
 <input type="submit" value="&#xf157;" class="fas fa-yen-sign">
 </form>
-</li>
+</div>
 @endif
 @else
 @endif
@@ -124,9 +124,9 @@
 <form action="{{ route('register') }}" method="get">
 <input type="submit" value="&#xf157;" class="fas fa-yen-sign">
 </form>
-</li>
+</div>
 @endauth
-</ul>
+</div>
 <div class="tips-row">
 @foreach ($tips as $tip)
 <table class="tips-box">
