@@ -4690,9 +4690,9 @@ a.badge:hover, a.badge:focus {
   text-decoration: none;
 }
 
-.badge:empty {
+/* .badge:empty {
   display: none;
-}
+} */
 
 .btn .badge {
   position: relative;
