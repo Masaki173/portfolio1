@@ -366,12 +366,12 @@ margin-top: 20px;
 .input-content{
   width: 100%;
 }
-/* .select-category{
+.select-category{
    text-align:center;
 }
 .price-content{
    text-align:center;
-} */
+}
 .add-content{
   padding: 4px 10px;
   border-top: 1px solid rgba(0, 0, 0, 0.12);
