@@ -13,7 +13,7 @@
    <div class="post-type">
   <div class="select-category">
   <label>
-  カテゴリ
+  カテゴリ:
   <select name="category" class="caterories">
     <option value="1">生活</option>
     <option value="2">社会</option>
@@ -23,7 +23,7 @@
   </select>
   </label>
    </div>
-   <div class="fee-paragraph">販売設定</div>
+   <div class="fee-paragraph">販売設定: </div>
    <div class="price-content">
   <label>
   <input type="radio" class="radioFee"  name="is_fee" value="0"  onclick="priceSwitch()" checked="checked">
