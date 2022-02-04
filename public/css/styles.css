@@ -433,12 +433,12 @@ color:black;
 .comment-forms{
 /* display:flex;
 justify-content: center; */
-/*   border-bottom: 1px solid rgba(0, 0, 0, 0.12); */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
    padding: 24px 32px;
 }
 .comment-btn{
     float: right;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+/*     border-bottom: 1px solid rgba(0, 0, 0, 0.12); */
 }
 .title-form{
      width: 100%;
