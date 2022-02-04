@@ -449,7 +449,7 @@ justify-content: center;
     padding: 10px;
     height: calc(100vh - 231px);
      width:100%;
-     border: 0px;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
     outline: 0px;
 }
 .post-type{
