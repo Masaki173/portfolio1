@@ -14,7 +14,7 @@
   <div class="select-category">
   <label>
   カテゴリ
-  <select name="category">
+  <select name="category" class="caterories">
     <option value="1">生活</option>
     <option value="2">社会</option>
     <option value="3">カルチャー</option>
@@ -34,7 +34,7 @@
 有料
 </label>
 <span id="pricing-form" class="price-span">
-<label>￥<input type="tel" id="priceForm" minlength="3" name="price" value="100" style="height:30px; font-size: 70%;" required></input> JPY</label>
+<label>￥<input type="tel" id="priceForm" minlength="3" name="price" value="100" style="height:30px; width:200px; font-size: 70%;" required></input> JPY</label>
 </span>
 </div>
  <div>
