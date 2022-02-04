@@ -31,8 +31,7 @@
                                             @csrf
                                             <label>￥<input type="tel" minlength="3" name="price"></input> JPY</label>
                                              @error('price')
- 　　　　　　　　　　　　　　　　　　　　　　　<tr><th>Error</th>
- 　　　　　　　　　　　　　　　　　　　　　　　<td>{{$message}}</td></tr>
+ 　　　　　　　　　　　　                    <div class="comment-paragraph><p>Error: {{$message}}</p></div>
  　　　　　　　　　　　　　　　　　　　　　　　@enderror
                                             <textarea name="comment" placeholder="チップにコメントを付けましょう" class="text-comment"></textarea>
                                             <button type="submit" id="" class="btn btn-primary">チップを投げる</button>
