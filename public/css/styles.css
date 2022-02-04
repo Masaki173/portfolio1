@@ -525,7 +525,7 @@ text-align:center;
     font-size: 14px;
 }
 .article-btn{
-   width: 100px;
+   width: 150px;
    height:45px;
 box-sizing: border-box;
     display: inline-block;
@@ -538,4 +538,7 @@ display: inline-block;
 }
 .fee-paragraph{
 padding-bottom:10px;
+}
+.categories{
+ width: 100px;
 }
