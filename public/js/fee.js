@@ -7,7 +7,7 @@ console.log('radioFee');
         if(radioFee[0].checked){
         formBox.style.display = "none";
       }else if(radioFee[1].checked){
-        formBox.style.display = "block";
+        formBox.style.display = "inline-block";
       }
   }
 window.onload = priceSwitch;
