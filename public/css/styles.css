@@ -494,7 +494,7 @@ text-align:center;
     color: var(--color-black);
     vertical-align: top;
     background: var(--color-white);
-    border: 1px solid var(--color-mercuryGray);
+    border: 1px solid #e6e6e6;
     border-radius: 4px;
     font-size: 14px;
 }
@@ -508,7 +508,7 @@ text-align:center;
     vertical-align: top;
     resize: vertical;
     background: var(--color-white);
-    border: 1px solid var(--color-mercuryGray);
+    border: 1px solid #e6e6e6;
     border-radius: 4px;
     font-size: 14px;
 }
