@@ -367,7 +367,7 @@ margin-top: 20px;
   width: 100%;
 }
 .select-category{
-   margin-right: 10px;
+   margin-right: 30px;
 }
 .price-content{
    text-align:center;
@@ -535,4 +535,7 @@ box-sizing: border-box;
 }
 .price-span{
 display: inline-block;
+}
+fee-paragraph{
+padding-bottom:10px;
 }
