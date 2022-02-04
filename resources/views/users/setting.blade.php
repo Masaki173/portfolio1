@@ -7,6 +7,6 @@
   <label>アイコン選択:  <input type="file"  name="icon" accept="icon/png, icon/jpeg, icon/jpg"></input></label>
   <textarea name="name" placeholder="名前を変更しましょう"></textarea>
   <textarea name="profile" placeholder="自己紹介を書きましょう"></textarea>
-  <button type=submit>追加</button>
+  <button type=submit class="btn btn-primary">追加</button>
  </form>
  @endsection
