@@ -80,7 +80,7 @@
 <div class="third-wrapper">
 <p class="comments-subject">コメント</p>
 <div class="comment-forms">
- <p class="comment-paragraph">コメントをする</p>
+ <p class="comment-paragraph">コメントをする(チップコメントが投げられます</p>
   <div class="tip-wrapper">
 @auth
 @if($post->user->id !== Auth::user()->id)
