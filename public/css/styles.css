@@ -543,3 +543,14 @@ margin-right:5px;
 .categories{
  width: 100px;
 }
+.tip-wrapper{
+    display:flex;
+    justify-content: flex-end; 
+    padding:10px;
+}
+.text-comment{
+    min-height: 100px;
+    padding: 10px;
+    resize: vertical;
+    width: 100%;
+}
