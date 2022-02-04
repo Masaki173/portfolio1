@@ -21,11 +21,6 @@
   </select>
    </div>
    <div class="price-content">
-  <tr><td>
- @error('is_fee')
- <tr><td>Error:{{$message}}</td></tr>
- @enderror
-</td></tr>
   <label>
   <input type="radio" class="radioFee"  name="is_fee" value="0"  onclick="priceSwitch()" checked="checked">
 無料
@@ -37,6 +32,11 @@
 <span id="pricing-form" class="price-span">
 <label>￥<input type="tel" id="priceForm" minlength="3" name="price" value="100" style="height:30px; font-size: 70%;" required></input> JPY</label>
 </span>
+ <div>
+ @error('is_fee')
+ <p>Error:{{$message}}</p>
+ @enderror
+</div>
 </div>
  </div>
  <tr><td>
