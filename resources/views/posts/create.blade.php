@@ -10,13 +10,7 @@
  @enderror
  </td></tr>
 <div class="input-title"><input type="text"  name="title" placeholder="記事のタイトルを書きましょう" class="title-form"></input></div>
-   <tr><td>
-   @error('content')
- <tr><td>Error:{{$message}}</td></tr>
- @enderror
- </td></tr>
-<div class="input-content"><textarea name="content" placeholder="記事の内容を書きましょう" class="content-form"></textarea></div>
-<div class="post-type">
+   <div class="post-type">
   <div class="select-category">
   <select name="category">
     <option value="1">生活</option>
@@ -44,10 +38,16 @@
 <label>￥<input type="tel" id="priceForm" minlength="3" name="price" value="100" style="height:30px; font-size: 70%;" required></input> JPY</label>
 </span>
 </div>
+ </div>
+ <tr><td>
+   @error('content')
+ <tr><td>Error:{{$message}}</td></tr>
+ @enderror
+ </td></tr>
+<div class="input-content"><textarea name="content" placeholder="記事の内容を書きましょう" class="content-form"></textarea></div>
 <div class="add-content">
   <button type=submit class="btn btn-primary">追加</button>
  </div>
  </form>
- </div>
  </div>
  @endsection
