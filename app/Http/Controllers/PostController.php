@@ -109,7 +109,7 @@ class PostController extends Controller
             ];
         $validator = Validator::make($request->all(), $rules, $messages);
          if($validator->fails()){
-             return redirect(route('post.edit', ['id' => $id,]))
+             return redirect(route('post.show', ['id' => $id,]))
                ->withErrors($validator)
                 ->withInput();
          }
