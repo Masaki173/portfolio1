@@ -473,11 +473,14 @@ text-align:center;
 text-align:center;
 }
 .select-icon{
+  margin-top:32px;
   text-align:left;
 }
 .change-name{
+    margin-top:32px;
   text-align:left;
 }
 .write-profile{
+    margin-top:32px;
   text-align:left;
 }
