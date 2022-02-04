@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class="contents">
-<h1 class="username"><img src="{{ Storage::url($user->icon)}}" width="40px" height="40px">{{$user->name}}</h1>
+<h1 class="username"><img src="{{ Storage::url($user->icon)}}"  class="img-circle" width="40px" height="40px">{{$user->name}}</h1>
 <p class="profile">{{$user->profile}}</p>
 @auth
 @if ($user->id === Auth::user()->id)
