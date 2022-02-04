@@ -540,3 +540,6 @@ box-sizing: border-box;
     border-style: solid;
     padding: 4px 16px;
 }
+.price-span{
+display: inline-block;
+}
