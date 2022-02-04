@@ -437,7 +437,7 @@ justify-content: center; */
    padding: 24px 32px;
 }
 .comment-btn{
-    margin-top:50px;
+    float: right;
 }
 .title-form{
      width: 100%;
