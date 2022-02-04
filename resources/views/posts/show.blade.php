@@ -79,22 +79,35 @@
 </div>
 <div class="third-wrapper">
 <p class="comments-subject">コメント</p>
+<div class="comment-forms">
+ <p class="comment-paragraph">コメントをする</p>
+  <div class="tip-wrapper">
 @auth
 @if($post->user->id !== Auth::user()->id)
-<div class="comment-forms">
-<div class="comment-wrapper">
+@if(is_null(Auth::user()->stripe_code))
+<form action="{{ route('payment.form') }}" method="get">
+<input type="submit" value="&#xf004;" class="fas fa-yen-sign">
+</form>
+</div>
 @else
-<div class="only-comment">
+<form action="{{ route('payment.tip', $post->id) }}" method="get">
+<input type="submit" value="&#xf157;" class="fas fa-yen-sign">
+</form>
+</div>
 @endif
 @else
-<div class="comment-forms">
-<div class="comment-wrapper">
+@endif
+@else
+<form action="{{ route('register') }}" method="get">
+<input type="submit" value="&#xf157;" class="fas fa-yen-sign">
+</form>
+</div>
 @endauth
- <p class="comment-paragraph">コメントをする</p>
+<div class="comment-wrapper">
 @auth
 <form action="{{ route('post.comment', $post->id) }}" method ="post" autocomplete="off">
 @csrf
-<textarea name="content" placeholder="感想コメントを書きましょう"></textarea>
+<textarea name="content" placeholder="感想コメントを書きましょう" class="text-comment"></textarea>
 <button type="submit" class="comment-btn btn btn-primary">追加</button>
 @error('content')
  <tr><th class="comment-error"><p>Error</p></th>
@@ -105,33 +118,8 @@
 @else
 <form action="{{ route('register') }}" method ="get" autocomplete="off">
 @csrf
-<textarea name="content" placeholder="感想コメントを書きましょう"></textarea>
+<textarea name="content" placeholder="感想コメントを書きましょう" class="text-comment"></textarea>
 <button type="submit" class="comment-btn btn btn-primary">追加</button>
-</form>
-</div>
-@endauth
- <div class="comment-wrapper">
-@auth
-@if($post->user->id !== Auth::user()->id)
-@if(is_null(Auth::user()->stripe_code))
-<p class="tip-paragraph">チップを投げてコメントをする</p>
-<form action="{{ route('payment.form') }}" method="get">
-<input type="submit" value="&#xf004;" class="fas fa-yen-sign">
-</form>
-</div>
-@else
-<p class="tip-paragraph">チップを投げてコメントをする</p>
-<form action="{{ route('payment.tip', $post->id) }}" method="get">
-<input type="submit" value="&#xf157;" class="fas fa-yen-sign">
-</form>
-</div>
-@endif
-@else
-@endif
-@else
-<p class="tip-paragraph">チップを投げてコメントをする</p>
-<form action="{{ route('register') }}" method="get">
-<input type="submit" value="&#xf157;" class="fas fa-yen-sign">
 </form>
 </div>
 @endauth
