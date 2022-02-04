@@ -87,9 +87,9 @@
  @else
  @endif
  @endauth
-  <div class="tip-wrapper">
 @auth
 @if($post->user->id !== Auth::user()->id)
+<div class="tip-wrapper">
 @if(is_null(Auth::user()->stripe_code))
 <form action="{{ route('payment.form') }}" method="get">
 <input type="submit" value="&#xf004;" class="fas fa-yen-sign">
@@ -104,6 +104,7 @@
 @else
 @endif
 @else
+<div class="tip-wrapper">
 <form action="{{ route('register') }}" method="get">
 <input type="submit" value="&#xf157;" class="fas fa-yen-sign">
 </form>
