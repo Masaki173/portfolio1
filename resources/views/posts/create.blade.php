@@ -32,11 +32,11 @@
 <span id="pricing-form" class="price-span">
 <label>￥<input type="tel" id="priceForm" minlength="3" name="price" value="100" style="height:30px; font-size: 70%;" required></input> JPY</label>
 </span>
+</div>
  <div>
  @error('is_fee')
  <p>Error:{{$message}}</p>
  @enderror
-</div>
 </div>
  </div>
  <tr><td>
