@@ -52,7 +52,7 @@
  </div>
  <div class="input-content"><textarea name="content" class="content-form">{{$post->content}}</textarea></div>
    <div class="add-content">
-  <button type=submit class="article-btn btn btn-primary">追加</button>
+  <button type=submit class="article-btn btn btn-primary">公開</button>
    </div>
  </form>
  </div>
