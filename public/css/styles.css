@@ -373,6 +373,7 @@ margin-top: 20px;
    text-align:center;
 } */
 .add-content{
+  padding: 4px 10px;
   border-top: 1px solid rgba(0, 0, 0, 0.12);
   display:flex;
   justify-content: flex-end; 
@@ -524,18 +525,10 @@ text-align:center;
     font-size: 14px;
 }
 .article-btn{
+   width: 100px;
+   height:45px;
 box-sizing: border-box;
     display: inline-block;
-    flex-shrink: 0;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 1.8;
-    margin-bottom: 0px;
-    min-height: 34px;
-    min-width: 64px;
-    text-align: center;
-    user-select: none;
-    white-space: nowrap;
     border-width: 2px;
     border-style: solid;
     padding: 4px 16px;
