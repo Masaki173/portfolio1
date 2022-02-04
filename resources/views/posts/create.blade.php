@@ -45,7 +45,7 @@
 </span>
 </div>
 <div class="add-content">
-  <button type=submit>追加</button>
+  <button type=submit class="btn btn-primary">追加</button>
  </div>
  </form>
  </div>
