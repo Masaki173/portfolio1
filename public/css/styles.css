@@ -409,7 +409,7 @@ float:left;
    position: relative;
   display:block;
   background-color: white;
-  max-width: 960px;
+  max-width: 900px;
   box-sizing:inherit;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 /*   box-shadow: 0 2px 4px #4385bb12; */
