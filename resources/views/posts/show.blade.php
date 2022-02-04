@@ -80,7 +80,13 @@
 <div class="third-wrapper">
 <p class="comments-subject">コメント</p>
 <div class="comment-forms">
- <p class="comment-paragraph">コメントをする<br>（チップコメントが投稿できます）</p>
+ <p class="comment-paragraph">コメントをする</p>
+ @auth
+@if($post->user->id !== Auth::user()->id)
+ <p class="comment-paragraph">（チップコメントが投稿できます）</p>
+ @else
+ @endif
+ @endauth
   <div class="tip-wrapper">
 @auth
 @if($post->user->id !== Auth::user()->id)
@@ -110,8 +116,7 @@
 <textarea name="content" placeholder="感想コメントを書きましょう" class="text-comment"></textarea>
 <button type="submit" class="comment-btn btn btn-primary">追加</button>
 @error('content')
- <tr><th class="comment-error"><p>Error</p></th>
- <td class="comment-message"><p>{{$message}}</p></td></tr>
+ <div class="comment-paragraph><p>Error: {{$message}}</p></div>
  @enderror
 </form>
  </div>
