@@ -19,13 +19,13 @@
     <option value="4">テクノロジー</option>
     <option value="5">エンタメ</option>
   </select>
-  </div>
+   </div>
+   <div class="price-content">
   <tr><td>
  @error('is_fee')
  <tr><td>Error:{{$message}}</td></tr>
  @enderror
 </td></tr>
-  <div class="price-content">
   <label>
   <input type="radio" class="radioFee"  name="is_fee" value="0"  onclick="priceSwitch()" checked="checked">
 無料
