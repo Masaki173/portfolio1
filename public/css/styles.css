@@ -486,7 +486,7 @@ text-align:center;
     margin-bottom:32px;
 }
 .name-setting{
-     width: 100%;
+     width: 50%;
      display: inline-block;
     min-height: 40px;
     padding: 4px 8px;
@@ -496,12 +496,11 @@ text-align:center;
     background: var(--color-white);
     border: 1px solid var(--color-mercuryGray);
     border-radius: 4px;
-    appearance: none;
     font-size: 14px;
 }
 .profile-setting{
         display: inline-block;
-    width: 100%;
+    width: 50%;
     padding: 8px;
     font-family: inherit;
     line-height: 1.5;
@@ -511,6 +510,5 @@ text-align:center;
     background: var(--color-white);
     border: 1px solid var(--color-mercuryGray);
     border-radius: 4px;
-    appearance: none;
     font-size: 14px;
 }
