@@ -23,7 +23,7 @@
   </select>
   </label>
    </div>
-   <div>販売設定</div>
+   <div class="fee-paragraph">販売設定</div>
    <div class="price-content">
   <label>
   <input type="radio" class="radioFee"  name="is_fee" value="0"  onclick="priceSwitch()" checked="checked">
