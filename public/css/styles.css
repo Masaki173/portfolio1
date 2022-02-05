@@ -552,5 +552,11 @@ margin-right:5px;
     min-height: 100px;
     padding: 10px;
     resize: vertical;
+    width: 80%;
+}
+.text-tip{
+    min-height: 100px;
+    padding: 10px;
+    resize: vertical;
     width: 100%;
 }
