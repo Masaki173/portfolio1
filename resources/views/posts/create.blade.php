@@ -12,7 +12,7 @@
 <div class="input-title"><input type="text"  name="title" placeholder="記事のタイトルを書きましょう" class="title-form"></input></div>
    <div class="post-type">
   <div class="select-category">
-  <label>
+  <label class="category-label">
   カテゴリ:
   <select name="category" class="caterories">
     <option value="1">生活</option>
