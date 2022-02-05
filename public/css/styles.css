@@ -434,7 +434,7 @@ color:black;
 /* display:flex;
 justify-content: center; */
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-   padding: 35px 35px 50px;
+   padding: 35px 50px 50px;
 }
 .comment-btn{
     float: right;
@@ -547,6 +547,17 @@ margin-right:5px;
     display:flex;
     justify-content: flex-end; 
     padding:10px;
+    background-color: rgb(242, 242, 242);
+    border-width: 1px 1px 0px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-top-color: rgba(0, 0, 0, 0.12);
+    border-right-color: rgba(0, 0, 0, 0.12);
+    border-left-color: rgba(0, 0, 0, 0.12);
+    border-image: initial;
+    border-bottom-style: initial;
+    border-bottom-color: initial;
 }
 .text-comment{
     min-height: 100px;
