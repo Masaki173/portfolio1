@@ -4025,6 +4025,11 @@ input[type=button].btn-block {
   border: 1px solid transparent;
   border-radius: 0.25rem;
 }
+@media screen and (max-width:639px) {
+.navbar-toggler{
+    width:100px;
+    }
+}
 .navbar-toggler:hover, .navbar-toggler:focus {
   text-decoration: none;
 }
