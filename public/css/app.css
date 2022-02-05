@@ -551,9 +551,6 @@ pre code {
   .container-sm, .container {
     max-width: 540px;
   }
-   table {
-   width:100%;
-    }
 }
 @media (min-width: 768px) {
   .container-md, .container-sm, .container {
