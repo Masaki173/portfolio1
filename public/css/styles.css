@@ -580,14 +580,17 @@ display: inline-block;
 }
 .fee-paragraph{
 padding-bottom:10px;
-margin-right:5px;
 }
-@media screen and (max-width:639px) {
+
+@media only screen and (min-width:640px) and (max-width:1023px) {
     .fee-paragraph{
-    font-size: 10px;
+    margin-right:5px;
     }
-    .category-label{
-    font-size 10px;
+}
+  
+@media screen and (min-width:1024px) {
+     .fee-paragraph{
+    margin-right:5px;
     }
 }
 .categories{
