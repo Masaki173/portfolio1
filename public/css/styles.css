@@ -18,6 +18,26 @@ table{
   background-color:#F0F8FF;
   margin-left:40px;
 }
+@media (min-width: 576px) {
+    table{
+      width:100%;
+    }
+}
+@media (min-width: 768px) {
+  table{
+      width:45%;
+  }
+}
+@media (min-width: 992px) {
+  table{
+      width:45%;
+  }
+}
+@media (min-width: 1200px) {
+  table{
+      width:45%;
+  }
+}
 .userposts{
   margin-top:40px;
   }
