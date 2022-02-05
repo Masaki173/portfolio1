@@ -19,6 +19,7 @@ table{
 .category{
   display:flex;
   position: relative;
+  justify-content: space-evenly;
   bottom:25px;
 }
 @media screen and (max-width:639px) {
@@ -26,7 +27,7 @@ table{
     width:100%;
     }
     .category{
-     justify-content: space-between; 
+   font-size: 1px;
     }
 }
    
@@ -35,18 +36,12 @@ table{
     width:45%;
     margin-left:40px;
     }
-    .category{
-      justify-content: space-evenly;
-    }
 }
   
 @media screen and (min-width:1024px) {
  table{
     width:45%;
     margin-left:40px;
-    }
-    .category{
-      justify-content: space-evenly;
     }
 }
 .userposts{
