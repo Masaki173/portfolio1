@@ -16,7 +16,7 @@
                                              @error('price')
  　　　　　　　　　　　　                    <div class="comment-paragraph"><p>Error: {{$message}}</p></div>
  　　　　　　　　　　　　　　　　　　　　　　　@enderror
-                                            <textarea name="comment" placeholder="チップにコメントを付けましょう" class="text-comment"></textarea>
+                                            <textarea name="comment" placeholder="チップにコメントを付けましょう" class="text-tip"></textarea>
                                             <button type="submit" id="" class="btn btn-primary">チップを投げる</button>
                                         </form>
                             </li>
