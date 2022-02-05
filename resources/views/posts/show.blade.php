@@ -86,6 +86,8 @@
  <p class="comment-paragraph">（チップコメントが投稿できます）</p>
  @else
  @endif
+ @else
+ <p class="comment-paragraph">（チップコメントが投稿できます）</p>
  @endauth
 @auth
 @if($post->user->id !== Auth::user()->id)
