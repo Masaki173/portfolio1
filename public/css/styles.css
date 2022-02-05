@@ -4,7 +4,6 @@
 }
 
 table{
-  width:45%;
   height: 170px;
   float:left;
   font-size:30px; 
@@ -18,25 +17,22 @@ table{
   background-color:#F0F8FF;
   margin-left:40px;
 }
-@media (min-width: 576px) {
+@media screen and (max-width:639px) {
     table{
-      width:100%;
+    width:100%;
     }
 }
-@media (min-width: 768px) {
-  table{
-      width:45%;
-  }
+   
+@media only screen and (min-width:640px) and (max-width:1023px) {
+     table{
+    width:45%;
+    }
 }
-@media (min-width: 992px) {
-  table{
-      width:45%;
-  }
-}
-@media (min-width: 1200px) {
-  table{
-      width:45%;
-  }
+  
+@media screen and (min-width:1024px) {
+ table{
+    width:45%;
+    }
 }
 .userposts{
   margin-top:40px;
