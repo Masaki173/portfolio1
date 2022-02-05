@@ -16,9 +16,17 @@ table{
   word-wrap: break-all;
   background-color:#F0F8FF;
 }
+.category{
+  display:flex;
+  position: relative;
+  bottom:25px;
+}
 @media screen and (max-width:639px) {
     table{
     width:100%;
+    }
+    .category{
+     justify-content: space-between; 
     }
 }
    
@@ -27,12 +35,18 @@ table{
     width:45%;
     margin-left:40px;
     }
+    .category{
+      justify-content: space-evenly;
+    }
 }
   
 @media screen and (min-width:1024px) {
  table{
     width:45%;
     margin-left:40px;
+    }
+    .category{
+      justify-content: space-evenly;
     }
 }
 .userposts{
@@ -145,12 +159,6 @@ margin-top:70px;
 }
 .user-icon{
   display:flex;
-}
-.category{
-  display:flex;
-  justify-content: space-evenly;
-  position: relative;
-  bottom:25px;
 }
 .category-url{
 display:flex;
