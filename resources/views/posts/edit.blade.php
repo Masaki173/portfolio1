@@ -7,7 +7,7 @@
  <div class="input-title"><input type="text"  name="title" class="title-form" value="{{$post->title}}" ></input></div>
     <div class="post-type">
   <div class="select-category">
-  <label>
+  <label class="category-label">
   カテゴリ:
   <select name="category" class="caterories">
     <option value="1">生活</option>
