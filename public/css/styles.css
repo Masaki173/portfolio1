@@ -473,7 +473,22 @@ justify-content: center; */
     padding: 8px 78px 8px 10px;
     border: 1px solid rgba(0, 0, 0, 0.12);
     border-radius: 3px;
-    font-size: 24px;
+}
+@media screen and (max-width:639px) {
+    .title-form{
+       font-size: 20px;
+    }
+}
+@media only screen and (min-width:640px) and (max-width:1023px) {
+    .title-form{
+     font-size: 24px;
+    }
+}
+  
+@media screen and (min-width:1024px) {
+    .title-form{
+     font-size: 24px;
+    }
 }
 .content-form{
     margin-top: 20px;
@@ -566,6 +581,14 @@ display: inline-block;
 .fee-paragraph{
 padding-bottom:10px;
 margin-right:5px;
+}
+@media screen and (max-width:639px) {
+    .fee-paragraph{
+    font-size: 15px;
+    }
+    .category-label{
+    font-size 15px;
+    }
 }
 .categories{
  width: 100px;
