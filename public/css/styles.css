@@ -393,8 +393,17 @@ margin-top: 20px;
 .input-content{
   width: 100%;
 }
-.select-category{
+
+@media only screen and (min-width:640px) and (max-width:1023px) {
+     .select-category{
    margin-right: 30px;
+}
+}
+  
+@media screen and (min-width:1024px) {
+ .select-category{
+   margin-right: 30px;
+}
 }
 .price-content{
    text-align:center;
