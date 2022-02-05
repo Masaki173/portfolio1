@@ -1,3 +1,9 @@
+@media screen and (max-width:639px) {
+.navbar-toggler{
+    width:100px;
+    }
+}
+
 .contents{
   margin:20px;
   text-align: center;
