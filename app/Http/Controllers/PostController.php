@@ -85,7 +85,8 @@ class PostController extends Controller
         $item = Post::find($id);
         $item->delete();
         $id = Auth::id();
-        return redirect('/');
+       return redirect(route('user.show', ['id' => $id,]))
+//         return redirect('/');
     }
     public function switchLike($id){
           Like::create(
