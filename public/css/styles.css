@@ -611,14 +611,17 @@ box-sizing: border-box;
 .price-span{
 display: inline-block;
 }
-.fee-paragraph{
-padding-bottom:10px;
-}
 .category-label{
 padding-bottom:5px;
 }
+@media screen and (max-width:639px) {
+    .fee-paragraph{
+    padding-bottom:5px;
+    }
+}
 @media only screen and (min-width:640px) and (max-width:1023px) {
     .fee-paragraph{
+    padding-bottom:10px;
     margin-right:5px;
     }
     .category-label{
@@ -627,7 +630,9 @@ padding-bottom:5px;
 }
   
 @media screen and (min-width:1024px) {
+    
      .fee-paragraph{
+     padding-bottom:10px;
     margin-right:5px;
     }
      .category-label{
