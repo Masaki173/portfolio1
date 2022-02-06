@@ -123,6 +123,7 @@ td{
 }
 h1{
 text-align: center;
+word-break: break-all;
 }
 h2{
 width: 400px;
