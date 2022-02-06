@@ -12,8 +12,7 @@
 <div class="input-title"><input type="text"  name="title" placeholder="記事のタイトルを書きましょう" class="title-form"></input></div>
    <div class="post-type">
   <div class="select-category">
-  <label class="category-label">
-  カテゴリ:
+  <div class="category-label">カテゴリ:</div>
   <select name="category" class="caterories">
     <option value="1">生活</option>
     <option value="2">社会</option>
@@ -21,7 +20,6 @@
     <option value="4">テクノロジー</option>
     <option value="5">エンタメ</option>
   </select>
-  </label>
    </div>
    <div class="fee-paragraph">販売設定: </div>
    <div class="price-content">
