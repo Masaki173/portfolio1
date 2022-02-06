@@ -6,8 +6,8 @@
   @csrf
  <div class="input-title"><input type="text"  name="title" class="title-form" value="{{$post->title}}" ></input></div>
     <div class="post-type">
-  <div class="select-category">
   <div class="category-label">カテゴリ</div>
+   <div class="select-category">
   <select name="category" class="caterories">
     <option value="1">生活</option>
     <option value="2">社会</option>
