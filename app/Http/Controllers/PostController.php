@@ -84,6 +84,7 @@ class PostController extends Controller
     public function destroy($id){
         $item = Post::find($id);
         $item->delete();
+        $id = Auth::id();
         return redirect('/');
     }
     public function switchLike($id){
