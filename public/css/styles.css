@@ -396,7 +396,7 @@ margin-top: 20px;
 
 @media only screen and (min-width:640px) and (max-width:1023px) {
      .select-category{
-   margin-right: 30px;
+   margin-bottom: 5px;
 }
 }
   
