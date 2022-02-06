@@ -12,7 +12,7 @@
 <div class="input-title"><input type="text"  name="title" placeholder="記事のタイトルを書きましょう" class="title-form"></input></div>
    <div class="post-type">
   <div class="select-category">
-  <div class="category-label">カテゴリ:</div>
+  <div class="category-label">カテゴリ</div>
   <select name="category" class="caterories">
     <option value="1">生活</option>
     <option value="2">社会</option>
@@ -21,7 +21,7 @@
     <option value="5">エンタメ</option>
   </select>
    </div>
-   <div class="fee-paragraph">販売設定: </div>
+   <div class="fee-paragraph">販売設定</div>
    <div class="price-content">
   <label>
   <input type="radio" class="radioFee"  name="is_fee" value="0"  onclick="priceSwitch()" checked="checked">
