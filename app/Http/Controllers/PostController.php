@@ -97,7 +97,7 @@ class PostController extends Controller
        return redirect(route('user.show', ['id' => $id,]));
 //         return redirect('/');
     }
-//     Likeインスタンス作成＆中間テーブルに値を入れる
+//     Likeインスタンス作成＆Like中間テーブルに値を入れる
     public function switchLike($id){
           Like::create(
             array(
@@ -152,6 +152,7 @@ class PostController extends Controller
 
   }
     public function donePayment(Request $request, $id){
+//         StripeAPIキーを取得して決済を作成
       $post = Post::find($id);
     \Stripe\Stripe::setApiKey(\Config::get('payment.stripe_secret_key'));
 
@@ -165,6 +166,7 @@ class PostController extends Controller
             ];
 
             $charge = \Stripe\Charge::create($chargeOject);
+//             投稿決済インスタンス作成&投稿決済中間テーブルにデータを保存
             PostSubscription::create(
               array(
                 'user_id' => Auth::id(),
@@ -183,6 +185,7 @@ class PostController extends Controller
   }
 
   public function doneTipPayment(Request $request, $id){
+//       値段フォームバリデーション
         $rules = [
         'price' =>'required',
         'price' => 'integer',
@@ -197,6 +200,7 @@ class PostController extends Controller
                ->withErrors($validator)
                 ->withInput();
          }
+//       投稿を取得してチップ決済を作成
     $post = Post::find($id);
     \Stripe\Stripe::setApiKey(\Config::get('payment.stripe_secret_key'));
     try {
@@ -208,6 +212,7 @@ class PostController extends Controller
       'customer'      => $user->stripe_code,
   ];
   $charge = \Stripe\Charge::create($chargeOject);
+//    チップインスタンス作成&チップ中間テーブルにデータ保存
   Tip::create(
     array(
       'user_id' => Auth::id(),
