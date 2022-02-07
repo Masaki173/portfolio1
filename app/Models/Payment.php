@@ -10,7 +10,7 @@ class Payment extends Model
  
   public static function setCustomer($token, $user)
   {
-         //       DBに保存するStripeデータを指定
+
       \Stripe\Stripe::setApiKey(\Config::get('payment.stripe_secret_key'));
 
       //Stripe上に顧客情報をtokenを使用することで保存
@@ -34,7 +34,7 @@ class Payment extends Model
            *  */
           return false;
       }
-
+         //       DBに保存するStripeデータを指定
       $targetCustomer = null;
       if (isset($customer->id)) {
           $targetCustomer = User::find(Auth::id());//要するに当該顧客のデータをUserテーブルから引っ張りたい
