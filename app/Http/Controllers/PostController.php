@@ -86,7 +86,7 @@ class PostController extends Controller
         if($category){
             $post->category_code = $request->category;
         }
-        $post->save();
+        $post->update();
         return redirect('/');
     }
 //     投稿情報を取得して削除
