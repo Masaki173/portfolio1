@@ -7,6 +7,7 @@ use App\Models\User;
 
 class Payment extends Model
 {
+    //       DBに保存するStripeデータを指定
   public static function setCustomer($token, $user)
   {
       \Stripe\Stripe::setApiKey(\Config::get('payment.stripe_secret_key'));
