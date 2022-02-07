@@ -20,7 +20,7 @@ class UserController extends Controller
     }
     public function update(Request $request, $id){
         $user = User::find($id);
-         $icon = $request->file('icon');
+        $icon = $request->file('icon');
         $name = $request->name;
         $profile = $request->profile;
         if(!$icon){
@@ -30,7 +30,7 @@ class UserController extends Controller
           if($profile){
          $user->profile = $request->profile;
           }
-        $user->save();
+        $user->update();
            return redirect('/');
         }else{
         if($icon->isValid()){
@@ -45,7 +45,7 @@ class UserController extends Controller
              if($profile){
              $user->profile = $request->profile;
              }
-        $user->save();
+        $user->update();
       return redirect('/');
         }
     }
@@ -54,7 +54,7 @@ class UserController extends Controller
         auth()->user()->follows()->attach( User::find($id) );
         $follows_query = $user->leftjoin('follower_user', 'follower_user.user_id', '=', 'users.id')->where('follower_id', Auth::id());
         $is_followed = $follows_query->first();
-        return view('users.show', compact('user', 'is_followed'));
+      return view('users.show', compact('user', 'is_followed'));
     }
     public function Unfollow($id){
         $user = User::with('posts')->findorFail($id);
